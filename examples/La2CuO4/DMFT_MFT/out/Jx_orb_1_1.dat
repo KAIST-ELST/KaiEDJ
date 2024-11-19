@@ -1,0 +1,209 @@
+
+
+
+
+
+Distance:   5.393533,    Cell Ind. [ 0, 0, 1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   1.0339
+        
+          J_tot :   1.0339,    J_sum :   1.0339
+
+
+
+
+
+Distance:   5.393533,    Cell Ind. [ 0, 0,-1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   1.0339
+        
+          J_tot :   1.0339,    J_sum :   1.0339
+
+
+
+
+
+Distance:   5.393534,    Cell Ind. [ 1, 1, 0],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   1.0374
+        
+          J_tot :   1.0374,    J_sum :   1.0374
+
+
+
+
+
+Distance:   5.393534,    Cell Ind. [-1,-1, 0],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   1.0374
+        
+          J_tot :   1.0374,    J_sum :   1.0374
+
+
+
+
+
+Distance:   7.141223,    Cell Ind. [ 0, 1, 0],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1  -0.0005
+        
+          J_tot :  -0.0005,    J_sum :  -0.0005
+
+
+
+
+
+Distance:   7.141223,    Cell Ind. [ 0,-1, 0],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1  -0.0005
+        
+          J_tot :  -0.0005,    J_sum :  -0.0005
+
+
+
+
+
+Distance:   7.141223,    Cell Ind. [ 1, 0, 0],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1  -0.0002
+        
+          J_tot :  -0.0002,    J_sum :  -0.0002
+
+
+
+
+
+Distance:   7.141223,    Cell Ind. [-1, 0, 0],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1  -0.0002
+        
+          J_tot :  -0.0002,    J_sum :  -0.0002
+
+
+
+
+
+Distance:   7.627608,    Cell Ind. [ 1, 1, 1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1  -0.5402
+        
+          J_tot :  -0.5402,    J_sum :  -0.5402
+
+
+
+
+
+Distance:   7.627608,    Cell Ind. [ 1, 1,-1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1  -0.5400
+        
+          J_tot :  -0.5400,    J_sum :  -0.5400
+
+
+
+
+
+Distance:   7.627608,    Cell Ind. [-1,-1, 1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1  -0.5400
+        
+          J_tot :  -0.5400,    J_sum :  -0.5400
+
+
+
+
+
+Distance:   7.627608,    Cell Ind. [-1,-1,-1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1  -0.5402
+        
+          J_tot :  -0.5402,    J_sum :  -0.5402
+
+
+
+
+
+Distance:   8.949149,    Cell Ind. [ 0, 1, 1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   0.0001
+        
+          J_tot :   0.0001,    J_sum :   0.0001
+
+
+
+
+
+Distance:   8.949149,    Cell Ind. [ 0, 1,-1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   0.0001
+        
+          J_tot :   0.0001,    J_sum :   0.0001
+
+
+
+
+
+Distance:   8.949149,    Cell Ind. [ 0,-1, 1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   0.0001
+        
+          J_tot :   0.0001,    J_sum :   0.0001
+
+
+
+
+
+Distance:   8.949149,    Cell Ind. [ 0,-1,-1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   0.0001
+        
+          J_tot :   0.0001,    J_sum :   0.0001
+
+
+
+
+
+Distance:   8.949149,    Cell Ind. [ 1, 0, 1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   0.0000
+        
+          J_tot :   0.0000,    J_sum :   0.0000
+
+
+
+
+
+Distance:   8.949149,    Cell Ind. [ 1, 0,-1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   0.0000
+        
+          J_tot :   0.0000,    J_sum :   0.0000
+
+
+
+
+
+Distance:   8.949149,    Cell Ind. [-1, 0, 1],    Atom Ind ( 1, 1)
+
+   J =          orb1    
+        orb1   0.0000
+        
+          J_tot :   0.0000,    J_sum :   0.0000

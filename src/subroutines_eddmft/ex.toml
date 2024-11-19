@@ -1,0 +1,10 @@
+# Example TOML file
+
+[section]
+key1 = "value1"
+key2 = 42
+
+[another_section]
+string_array = ["apple", "banana", "cherry"]
+boolean_value = true
+

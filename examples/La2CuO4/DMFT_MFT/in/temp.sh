@@ -1,0 +1,10 @@
+rm log
+rm Jx_raw_1_1.dat
+rm Jx_raw_1_2.dat
+rm Jx_1_1.dat
+rm Jx_1_2.dat
+rm zeroline.dat
+rm Jx.gnu
+rm Jx_orb_1_1.dat
+rm Jx_orb_1_2.dat
+rm output_dmftmft.png

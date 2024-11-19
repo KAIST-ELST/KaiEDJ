@@ -1,0 +1,2646 @@
+nodes list
+node14 32 intel4@node14 UNDEFINED
+ 
+:: initializing oneAPI environment ...
+   179692: BASH_VERSION = 4.3.48(1)-release
+   args: Using "$@" for setvars.sh arguments: 
+:: advisor -- latest
+:: ccl -- latest
+:: clck -- latest
+:: compiler -- latest
+:: dal -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: dnnl -- latest
+:: dpcpp-ct -- latest
+:: dpl -- latest
+:: inspector -- latest
+:: intelpython -- latest
+:: ipp -- latest
+:: ippcp -- latest
+:: ipp -- latest
+:: itac -- latest
+:: mkl -- latest
+:: mpi -- latest
+:: tbb -- latest
+:: vpl -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode
+--------------------------------
+jobid:    179692
+jname:    run_jx_dmft.p
+nodes:    
+cores:    32
+Nodefile: /var/spool/gridengine/execd/node14/active_jobs/179692.1/pe_hostfile
+# time-start Sun Jul 7 17:47:07 KST 2024
+--------------------------------
+ Update required. Automatic update checking started
+ Visit https://kaist-elst.github.io/DFTforge.jl/ for more update news.
+ Checking the updated version ...
+ DFTforge Version 1.3.3
+ JX_VERSION: 0.9.3-pub+20190529
+ Visit https://kaist-elst.github.io/DFTforge.jl/ for details & updates 
+ Tested with Julia v1.0 and v1.1 which the most recent version of Julia in 201906 https://julialang.org/
+ TOML file: fe_J_wannier.toml
+/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier_hr.dat
+/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier.win
+/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier_hr.dat
+/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier.win
+Dict("result_file_up" => "/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier", "result_file_down" => "/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier")
+DFTforge.DFTcommon.Wannier_OptionalInfo(1, [0.0 0.0 0.0], Array{Int64, N} where N[[1, 2, 3, 4, 5, 6, 7, 8, 9]])
+ result file is not found result_file_up	/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier
+ result file is not found result_file_down	/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier
+Array{Int64, N} where N[[]] AbstractString["all"]
+Array{Int64, N} where N[[]] AbstractString["all"]
+Array{Int64, N} where N[[]] AbstractString["all"]
+Array{Int64, N} where N[[]] AbstractString["all"]
+================================================================
+energy windows
+energywindow_all_list: Vector{Float64}[]
+energywindow_1_list: Vector{Float64}[]
+energywindow_2_list: Vector{Float64}[]
+energywindow_3_list: Vector{Float64}[]
+energywindow_4_list: Vector{Float64}[]
+================================================================
+atom12_list: [(1, 1)]
+q_point_num [2, 2, 2]	k_point_num [2, 2, 2]
+DFT_type Wannier90
+orbital_selection_option nomask
+mask1list Array{Int64, N} where N[[]]	mask2list Array{Int64, N} where N[[]]
+basisTransformbasisTransform_rule_type(false, Dict{Int64, orbital_rot_type}(), false, Dict{Int64, orbital_downfold_type}(), true, true, Vector{Any}[], custom_transfrom_type[])
+jx.col.dmft.spin.wannier_0.0/wannier.hdf5
+================================================================
+set_current_dftdataset:3
+1
+Array{Int64, N} where N[[1, 2, 3, 4, 5, 6, 7, 8, 9]]
+/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier.win
+fermi_energy = 0.0
+/home/users1/hjun/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/wannier.win
+fermi_energy = 0.0
+ basisTransform_init 
+ atomnum_eff 1 orbitalNums_eff [9]
+ orbitalStartIdx_list [0]
+      From worker 2:	set_current_dftdataset:5
+      From worker 16:	set_current_dftdataset:5
+      From worker 7:	set_current_dftdataset:5
+      From worker 21:	set_current_dftdataset:5
+      From worker 3:	set_current_dftdataset:5
+      From worker 23:	set_current_dftdataset:5
+      From worker 5:	set_current_dftdataset:5
+      From worker 22:	set_current_dftdataset:5
+      From worker 13:	set_current_dftdataset:5
+      From worker 8:	set_current_dftdataset:5
+      From worker 18:	set_current_dftdataset:5
+      From worker 14:	set_current_dftdataset:5
+      From worker 28:	set_current_dftdataset:5
+      From worker 15:	set_current_dftdataset:5
+      From worker 24:	set_current_dftdataset:5
+      From worker 17:	set_current_dftdataset:5
+      From worker 32:	set_current_dftdataset:5
+      From worker 33:	set_current_dftdataset:5
+      From worker 25:	set_current_dftdataset:5
+      From worker 6:	set_current_dftdataset:5
+      From worker 27:	set_current_dftdataset:5
+      From worker 4:	set_current_dftdataset:5
+      From worker 30:	set_current_dftdataset:5
+      From worker 9:	set_current_dftdataset:5
+      From worker 31:	set_current_dftdataset:5
+      From worker 29:	set_current_dftdataset:5
+      From worker 11:	set_current_dftdataset:5
+      From worker 12:	set_current_dftdataset:5
+      From worker 19:	set_current_dftdataset:5
+      From worker 10:	set_current_dftdataset:5
+      From worker 26:	set_current_dftdataset:5
+      From worker 20:	set_current_dftdataset:5
+ Calculation mode :DMFT
+┌ Warning: Assignment to `DMFT_loop` in soft scope is ambiguous because a global variable by the same name exists: `DMFT_loop` will be treated as a new local. Disambiguate by using `local DMFT_loop` to suppress this warning or `global DMFT_loop` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5188
+┌ Warning: Assignment to `SelfE_w_new` in soft scope is ambiguous because a global variable by the same name exists: `SelfE_w_new` will be treated as a new local. Disambiguate by using `local SelfE_w_new` to suppress this warning or `global SelfE_w_new` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5196
+┌ Warning: Assignment to `imp_totN` in soft scope is ambiguous because a global variable by the same name exists: `imp_totN` will be treated as a new local. Disambiguate by using `local imp_totN` to suppress this warning or `global imp_totN` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5235
+┌ Warning: Assignment to `imp_dc` in soft scope is ambiguous because a global variable by the same name exists: `imp_dc` will be treated as a new local. Disambiguate by using `local imp_dc` to suppress this warning or `global imp_dc` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5236
+┌ Warning: Assignment to `init_mu` in soft scope is ambiguous because a global variable by the same name exists: `init_mu` will be treated as a new local. Disambiguate by using `local init_mu` to suppress this warning or `global init_mu` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5251
+┌ Warning: Assignment to `mu` in soft scope is ambiguous because a global variable by the same name exists: `mu` will be treated as a new local. Disambiguate by using `local mu` to suppress this warning or `global mu` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5254
+┌ Warning: Assignment to `Occup` in soft scope is ambiguous because a global variable by the same name exists: `Occup` will be treated as a new local. Disambiguate by using `local Occup` to suppress this warning or `global Occup` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5254
+┌ Warning: Assignment to `H_loc` in soft scope is ambiguous because a global variable by the same name exists: `H_loc` will be treated as a new local. Disambiguate by using `local H_loc` to suppress this warning or `global H_loc` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5254
+┌ Warning: Assignment to `G_loc_iWn` in soft scope is ambiguous because a global variable by the same name exists: `G_loc_iWn` will be treated as a new local. Disambiguate by using `local G_loc_iWn` to suppress this warning or `global G_loc_iWn` to assign to the existing global variable.
+└ @ timing.jl:210
+┌ Warning: Assignment to `red_G_loc_iWn` in soft scope is ambiguous because a global variable by the same name exists: `red_G_loc_iWn` will be treated as a new local. Disambiguate by using `local red_G_loc_iWn` to suppress this warning or `global red_G_loc_iWn` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5279
+┌ Warning: Assignment to `G_loc_iWn_mat` in soft scope is ambiguous because a global variable by the same name exists: `G_loc_iWn_mat` will be treated as a new local. Disambiguate by using `local G_loc_iWn_mat` to suppress this warning or `global G_loc_iWn_mat` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5285
+┌ Warning: Assignment to `InvWiess_iWn_mat` in soft scope is ambiguous because a global variable by the same name exists: `InvWiess_iWn_mat` will be treated as a new local. Disambiguate by using `local InvWiess_iWn_mat` to suppress this warning or `global InvWiess_iWn_mat` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5286
+┌ Warning: Assignment to `hyb_iWn_mat` in soft scope is ambiguous because a global variable by the same name exists: `hyb_iWn_mat` will be treated as a new local. Disambiguate by using `local hyb_iWn_mat` to suppress this warning or `global hyb_iWn_mat` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5287
+┌ Warning: Assignment to `InvWiess_iWn` in soft scope is ambiguous because a global variable by the same name exists: `InvWiess_iWn` will be treated as a new local. Disambiguate by using `local InvWiess_iWn` to suppress this warning or `global InvWiess_iWn` to assign to the existing global variable.
+└ @ timing.jl:210
+┌ Warning: Assignment to `hyb_iWn` in soft scope is ambiguous because a global variable by the same name exists: `hyb_iWn` will be treated as a new local. Disambiguate by using `local hyb_iWn` to suppress this warning or `global hyb_iWn` to assign to the existing global variable.
+└ @ timing.jl:210
+┌ Warning: Assignment to `hyb` in soft scope is ambiguous because a global variable by the same name exists: `hyb` will be treated as a new local. Disambiguate by using `local hyb` to suppress this warning or `global hyb` to assign to the existing global variable.
+└ @ ~/jx/jx-dmft/Fe_in/dmft_U5_J0.8_originalcode/Jx_DMFT.jl:5309
+#####################################################
+      Calculation type : self-consistent DMFT        
+#####################################################
+
+
+
+  0.344604 seconds (313.69 k allocations: 18.414 MiB, 49.19% compilation time)
+  0.146706 seconds (122.30 k allocations: 7.197 MiB, 63.06% compilation time)
+  0.123484 seconds (89.04 k allocations: 5.318 MiB, 42.67% compilation time)
+
+
+
+
+
+                 =============================================  
+                 ================    Jx DMFT  ================  
+                 =============================================  
+
+
+
+------------- input -------------
+K-points grid : [10, 10, 10]
+R-points grid : [10, 10, 10]
+iW_grid_cut : 300.0
+Temperature : 386.0
+DMFT spin type : 2
+Correlated atoms : [1]
+Correlated atoms equiv. : [1]
+
+Green-function basis : matsubara
+Solver green cut w: 10.0
+Solver Measure time: 20.0
+Solver thermalization time: 1.0
+First smth. step for self energy: 0
+Cal. susc. ?: false
+initial bias of selfE for spin-polarized : +/-0.5
+self-energy simple mixing ratio of old selfE : 0.5
+
+transform basis ?: false
+consider degeneracy ?: true
+
+double counting type: FLL-DFT
+
+                imp [1]
+U     : 5.0
+J     : 0.8
+interaction type  :ising
+interaction parameterisation  :slater-condon
+dc_n0 : 6.0,   [ nominal DC (eV) : 25.5 ]
+imp-1 index :
+            [1, 0, 0, 0, 0]
+            [0, 2, 0, 0, 0]
+            [0, 0, 3, 0, 0]
+            [0, 0, 0, 4, 0]
+            [0, 0, 0, 0, 5]
+
+------------- input -------------
+
+===== loading H_k from tight-binding parameter ... ======
+ 51.300234 seconds (52.27 M allocations: 28.963 GiB, 3.06% gc time, 3.37% compilation time)
+  0.329453 seconds (218.14 k allocations: 92.036 MiB, 12.74% compilation time)
+
+
+  0.243947 seconds (200.73 k allocations: 14.133 MiB, 17.88% compilation time)
+  0.110088 seconds (94.28 k allocations: 20.220 MiB, 7.29% compilation time)
+  1.769522 seconds (6.65 M allocations: 348.278 MiB, 91.85% compilation time)
+  0.126734 seconds (79.97 k allocations: 12.348 MiB, 95.41% compilation time)
+===== SelfE = imp_dc block initialize ... ===== 
+Impurity [1] : orbital # :5,    Spin type :2
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [-1.0,1.0] ==========
+ [  1 ] Test mu :  -1.0000000  ==>  Occup :   5.753206  |  target N :  8.0 
+ [  2 ] Test mu :   1.0000000  ==>  Occup :  10.462096  |  target N :  8.0 
+ [  3 ] Test mu :  -0.0457230  ==>  Occup :   7.810976  |  target N :  8.0 
+ [  4 ] Test mu :   0.0288370  ==>  Occup :   8.133456  |  target N :  8.0 
+ [  5 ] Test mu :  -0.0020191  ==>  Occup :   8.004511  |  target N :  8.0 
+ [  6 ] Test mu :  -0.0030669  ==>  Occup :   8.000014  |  target N :  8.0 
+ [  7 ] Test mu :  -0.0030702  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :-0.00307018107517753
+-----------------------------------------------------------------------
+
+172.052944 seconds (6.26 M allocations: 577.681 MiB, 0.08% gc time, 0.76% compilation time)
+-------------------------------------
+Initial latt. mu in transform basis :-0.00307018107517753
+-------------------------------------
+
+ == You turned on the 'consider_degeneracy = true', so from now on degenerate states will be considered equivalently == 
+
+Old imp ind :
+             imp-1
+                        [1, 0, 0, 0, 0]
+                        [0, 2, 0, 0, 0]
+                        [0, 0, 3, 0, 0]
+                        [0, 0, 0, 4, 0]
+                        [0, 0, 0, 0, 5]
+
+New imp ind :
+             imp-1
+                        [1, 0, 0, 0, 0]
+                        [0, 1, 0, 0, 0]
+                        [0, 0, 2, 0, 0]
+                        [0, 0, 0, 1, 0]
+                        [0, 0, 0, 0, 2]
+
+ == You turn on the consider_degeneracy = true, so from now on degenerate states will be considered equivalently == 
+
+===== SelfE = imp_dc block initialize ... ===== 
+Impurity [1] : orbital # :2,    Spin type :2
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [-15.0,15.0] ==========
+ [  1 ] Test mu : -15.0000000  ==>  Occup :   0.002320  |  target N :  8.0 
+ [  2 ] Test mu :  15.0000000  ==>  Occup :  14.286726  |  target N :  8.0 
+ [  3 ] Test mu :   1.7966568  ==>  Occup :   7.060570  |  target N :  8.0 
+ [  4 ] Test mu :   3.5131385  ==>  Occup :  10.705638  |  target N :  8.0 
+ [  5 ] Test mu :   2.2390375  ==>  Occup :   8.229188  |  target N :  8.0 
+ [  6 ] Test mu :   2.1484463  ==>  Occup :   8.080938  |  target N :  8.0 
+ [  7 ] Test mu :   2.1068719  ==>  Occup :   7.983171  |  target N :  8.0 
+ [  8 ] Test mu :   2.1136229  ==>  Occup :   8.000206  |  target N :  8.0 
+ [  9 ] Test mu :   2.1135405  ==>  Occup :   8.000001  |  target N :  8.0 
+ [ 10 ] Test mu :   2.1135400  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :2.1135399524211054
+-----------------------------------------------------------------------
+
+293.941052 seconds (1.43 M allocations: 406.645 MiB, 0.04% gc time)
+-------------------------
+Initial latt. mu :2.1135399524211054
+-------------------------
+===== Calculating local green function ... =====
+ 15.798816 seconds (2.56 M allocations: 162.023 MiB, 7.18% compilation time)
+
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  1.668002 seconds (1.80 M allocations: 102.786 MiB, 47.88% compilation time)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.252276 seconds (341.88 k allocations: 20.967 MiB, 96.27% compilation time)
+
+Writing hyb.json ...
+Writing hyb.json ...
+Writing params.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [1] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [-15.0,15.0] ==========
+ [  1 ] Test mu : -15.0000000  ==>  Occup :   0.081699  |  target N :  8.0 
+ [  2 ] Test mu :  15.0000000  ==>  Occup :  14.233558  |  target N :  8.0 
+ [  3 ] Test mu :   1.7857068  ==>  Occup :   7.898457  |  target N :  8.0 
+ [  4 ] Test mu :   1.9975070  ==>  Occup :   8.072875  |  target N :  8.0 
+ [  5 ] Test mu :   1.9090130  ==>  Occup :   7.981164  |  target N :  8.0 
+ [  6 ] Test mu :   1.9292454  ==>  Occup :   7.995923  |  target N :  8.0 
+ [  7 ] Test mu :   1.9342134  ==>  Occup :   7.999924  |  target N :  8.0 
+ [  8 ] Test mu :   1.9343049  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.9343049308370237
+-----------------------------------------------------------------------
+
+256.622238 seconds (1.14 M allocations: 316.155 MiB)
+===== Calculating local green function ... =====
+ 14.350831 seconds (208.13 k allocations: 26.259 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.117569 seconds (176.68 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008622 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [2] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [1.2343049308370238,2.6343049308370237] ==========
+ [  1 ] Test mu :   1.2343049  ==>  Occup :   7.547961  |  target N :  8.0 
+ [  2 ] Test mu :   2.6343049  ==>  Occup :   8.977316  |  target N :  8.0 
+ [  3 ] Test mu :   1.6770610  ==>  Occup :   7.933354  |  target N :  8.0 
+ [  4 ] Test mu :   1.7381710  ==>  Occup :   7.976225  |  target N :  8.0 
+ [  5 ] Test mu :   1.7594536  ==>  Occup :   7.998291  |  target N :  8.0 
+ [  6 ] Test mu :   1.7610550  ==>  Occup :   8.000091  |  target N :  8.0 
+ [  7 ] Test mu :   1.7609746  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.7609745710200144
+-----------------------------------------------------------------------
+
+222.909662 seconds (997.90 k allocations: 270.911 MiB)
+===== Calculating local green function ... =====
+ 14.308798 seconds (208.12 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.118889 seconds (176.70 k allocations: 9.287 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009177 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [3] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [1.0609745710200145,2.4609745710200146] ==========
+ [  1 ] Test mu :   1.0609746  ==>  Occup :   7.487851  |  target N :  8.0 
+ [  2 ] Test mu :   2.4609746  ==>  Occup :   8.826445  |  target N :  8.0 
+ [  3 ] Test mu :   1.5966179  ==>  Occup :   7.965647  |  target N :  8.0 
+ [  4 ] Test mu :   1.6311125  ==>  Occup :   7.997645  |  target N :  8.0 
+ [  5 ] Test mu :   1.6334704  ==>  Occup :   8.000083  |  target N :  8.0 
+ [  6 ] Test mu :   1.6333901  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.6333901426624409
+-----------------------------------------------------------------------
+
+191.094942 seconds (855.32 k allocations: 225.665 MiB)
+===== Calculating local green function ... =====
+ 14.356405 seconds (208.11 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.121979 seconds (176.68 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009429 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [4] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.9333901426624409,2.3333901426624406] ==========
+ [  1 ] Test mu :   0.9333901  ==>  Occup :   7.423667  |  target N :  8.0 
+ [  2 ] Test mu :   2.3333901  ==>  Occup :   8.751308  |  target N :  8.0 
+ [  3 ] Test mu :   1.5411336  ==>  Occup :   7.999391  |  target N :  8.0 
+ [  4 ] Test mu :   1.5417748  ==>  Occup :   8.000041  |  target N :  8.0 
+ [  5 ] Test mu :   1.5417339  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.5417338847245166
+-----------------------------------------------------------------------
+
+159.287733 seconds (712.74 k allocations: 180.430 MiB)
+===== Calculating local green function ... =====
+ 14.272196 seconds (208.13 k allocations: 26.256 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.110566 seconds (176.66 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007811 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [5] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.8417338847245166,2.2417338847245167] ==========
+ [  1 ] Test mu :   0.8417339  ==>  Occup :   7.376069  |  target N :  8.0 
+ [  2 ] Test mu :   2.2417339  ==>  Occup :   8.720033  |  target N :  8.0 
+ [  3 ] Test mu :   1.4916789  ==>  Occup :   8.017144  |  target N :  8.0 
+ [  4 ] Test mu :   1.4742979  ==>  Occup :   7.999069  |  target N :  8.0 
+ [  5 ] Test mu :   1.4751932  ==>  Occup :   7.999968  |  target N :  8.0 
+ [  6 ] Test mu :   1.4752247  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.475224709182042
+-----------------------------------------------------------------------
+
+191.480381 seconds (855.26 k allocations: 225.671 MiB)
+===== Calculating local green function ... =====
+ 14.305064 seconds (208.14 k allocations: 26.256 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.114767 seconds (176.67 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008677 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [6] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.7752247091820421,2.175224709182042] ==========
+ [  1 ] Test mu :   0.7752247  ==>  Occup :   7.354189  |  target N :  8.0 
+ [  2 ] Test mu :   2.1752247  ==>  Occup :   8.705045  |  target N :  8.0 
+ [  3 ] Test mu :   1.4445304  ==>  Occup :   8.026880  |  target N :  8.0 
+ [  4 ] Test mu :   1.4177862  ==>  Occup :   7.998814  |  target N :  8.0 
+ [  5 ] Test mu :   1.4189162  ==>  Occup :   7.999942  |  target N :  8.0 
+ [  6 ] Test mu :   1.4189740  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.4189740237128192
+-----------------------------------------------------------------------
+
+191.190569 seconds (855.31 k allocations: 225.673 MiB)
+===== Calculating local green function ... =====
+ 14.233047 seconds (208.11 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.108511 seconds (176.66 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007463 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [7] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.7189740237128193,2.118974023712819] ==========
+ [  1 ] Test mu :   0.7189740  ==>  Occup :   7.333481  |  target N :  8.0 
+ [  2 ] Test mu :   2.1189740  ==>  Occup :   8.694732  |  target N :  8.0 
+ [  3 ] Test mu :   1.4044651  ==>  Occup :   8.033211  |  target N :  8.0 
+ [  4 ] Test mu :   1.3719305  ==>  Occup :   7.998882  |  target N :  8.0 
+ [  5 ] Test mu :   1.3729896  ==>  Occup :   7.999937  |  target N :  8.0 
+ [  6 ] Test mu :   1.3730528  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.3730527578758278
+-----------------------------------------------------------------------
+
+191.629249 seconds (855.33 k allocations: 225.668 MiB)
+===== Calculating local green function ... =====
+ 14.331793 seconds (208.11 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.122226 seconds (176.68 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009450 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [8] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.6730527578758279,2.0730527578758275] ==========
+ [  1 ] Test mu :   0.6730528  ==>  Occup :   7.317950  |  target N :  8.0 
+ [  2 ] Test mu :   2.0730528  ==>  Occup :   8.686144  |  target N :  8.0 
+ [  3 ] Test mu :   1.3709577  ==>  Occup :   8.038646  |  target N :  8.0 
+ [  4 ] Test mu :   1.3335342  ==>  Occup :   7.999062  |  target N :  8.0 
+ [  5 ] Test mu :   1.3344214  ==>  Occup :   7.999943  |  target N :  8.0 
+ [  6 ] Test mu :   1.3344787  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.3344787413585022
+-----------------------------------------------------------------------
+
+191.134436 seconds (855.36 k allocations: 225.672 MiB)
+===== Calculating local green function ... =====
+ 14.327085 seconds (208.13 k allocations: 26.255 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.111638 seconds (176.67 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008056 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [9] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.6344787413585022,2.034478741358502] ==========
+ [  1 ] Test mu :   0.6344787  ==>  Occup :   7.302530  |  target N :  8.0 
+ [  2 ] Test mu :   2.0344787  ==>  Occup :   8.679851  |  target N :  8.0 
+ [  3 ] Test mu :   1.3434339  ==>  Occup :   8.042776  |  target N :  8.0 
+ [  4 ] Test mu :   1.3024656  ==>  Occup :   7.999471  |  target N :  8.0 
+ [  5 ] Test mu :   1.3029660  ==>  Occup :   7.999966  |  target N :  8.0 
+ [  6 ] Test mu :   1.3030005  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.3030004896250156
+-----------------------------------------------------------------------
+
+191.107750 seconds (855.32 k allocations: 225.670 MiB)
+===== Calculating local green function ... =====
+ 14.381881 seconds (208.13 k allocations: 26.259 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.115750 seconds (176.69 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008692 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [10] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.6030004896250156,2.0030004896250153] ==========
+ [  1 ] Test mu :   0.6030005  ==>  Occup :   7.297973  |  target N :  8.0 
+ [  2 ] Test mu :   2.0030005  ==>  Occup :   8.675135  |  target N :  8.0 
+ [  3 ] Test mu :   1.3166694  ==>  Occup :   8.044509  |  target N :  8.0 
+ [  4 ] Test mu :   1.2741192  ==>  Occup :   7.999750  |  target N :  8.0 
+ [  5 ] Test mu :   1.2743565  ==>  Occup :   7.999984  |  target N :  8.0 
+ [  6 ] Test mu :   1.2743722  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.2743722493760914
+-----------------------------------------------------------------------
+
+191.014001 seconds (855.31 k allocations: 225.676 MiB)
+===== Calculating local green function ... =====
+ 14.243626 seconds (208.11 k allocations: 26.252 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.130503 seconds (176.69 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009551 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [11] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.5743722493760914,1.9743722493760913] ==========
+ [  1 ] Test mu :   0.5743722  ==>  Occup :   7.284429  |  target N :  8.0 
+ [  2 ] Test mu :   1.9743722  ==>  Occup :   8.669330  |  target N :  8.0 
+ [  3 ] Test mu :   1.2977446  ==>  Occup :   8.049131  |  target N :  8.0 
+ [  4 ] Test mu :   1.2512687  ==>  Occup :   8.000289  |  target N :  8.0 
+ [  5 ] Test mu :   1.2509957  ==>  Occup :   8.000020  |  target N :  8.0 
+ [  6 ] Test mu :   1.2509756  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.2509755538398881
+-----------------------------------------------------------------------
+
+190.905741 seconds (855.31 k allocations: 225.674 MiB)
+===== Calculating local green function ... =====
+ 14.305625 seconds (208.13 k allocations: 26.259 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.115629 seconds (176.67 k allocations: 9.284 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008737 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [12] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.5509755538398882,1.950975553839888] ==========
+ [  1 ] Test mu :   0.5509756  ==>  Occup :   7.277127  |  target N :  8.0 
+ [  2 ] Test mu :   1.9509756  ==>  Occup :   8.664782  |  target N :  8.0 
+ [  3 ] Test mu :   1.2802797  ==>  Occup :   8.051147  |  target N :  8.0 
+ [  4 ] Test mu :   1.2320874  ==>  Occup :   8.000696  |  target N :  8.0 
+ [  5 ] Test mu :   1.2314319  ==>  Occup :   8.000051  |  target N :  8.0 
+ [  6 ] Test mu :   1.2313797  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.2313797353824085
+-----------------------------------------------------------------------
+
+191.147076 seconds (855.31 k allocations: 225.675 MiB)
+===== Calculating local green function ... =====
+ 14.279869 seconds (208.11 k allocations: 26.255 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.111288 seconds (176.66 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007907 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [13] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.5313797353824086,1.9313797353824085] ==========
+ [  1 ] Test mu :   0.5313797  ==>  Occup :   7.268715  |  target N :  8.0 
+ [  2 ] Test mu :   1.9313797  ==>  Occup :   8.661724  |  target N :  8.0 
+ [  3 ] Test mu :   1.2663343  ==>  Occup :   8.055301  |  target N :  8.0 
+ [  4 ] Test mu :   1.2146630  ==>  Occup :   8.001389  |  target N :  8.0 
+ [  5 ] Test mu :   1.2133674  ==>  Occup :   8.000120  |  target N :  8.0 
+ [  6 ] Test mu :   1.2132453  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.2132452599341217
+-----------------------------------------------------------------------
+
+191.280299 seconds (855.29 k allocations: 225.672 MiB)
+===== Calculating local green function ... =====
+ 14.384128 seconds (208.12 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.108885 seconds (176.65 k allocations: 9.281 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008122 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [14] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.5132452599341217,1.9132452599341216] ==========
+ [  1 ] Test mu :   0.5132453  ==>  Occup :   7.260167  |  target N :  8.0 
+ [  2 ] Test mu :   1.9132453  ==>  Occup :   8.657439  |  target N :  8.0 
+ [  3 ] Test mu :   1.2545222  ==>  Occup :   8.057636  |  target N :  8.0 
+ [  4 ] Test mu :   1.2009469  ==>  Occup :   8.001746  |  target N :  8.0 
+ [  5 ] Test mu :   1.1993282  ==>  Occup :   8.000155  |  target N :  8.0 
+ [  6 ] Test mu :   1.1991708  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1991707698325058
+-----------------------------------------------------------------------
+
+190.889071 seconds (855.27 k allocations: 225.670 MiB)
+===== Calculating local green function ... =====
+ 14.277364 seconds (208.08 k allocations: 26.257 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.112015 seconds (176.67 k allocations: 9.284 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008317 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [15] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.49917076983250586,1.8991707698325058] ==========
+ [  1 ] Test mu :   0.4991708  ==>  Occup :   7.253012  |  target N :  8.0 
+ [  2 ] Test mu :   1.8991708  ==>  Occup :   8.654656  |  target N :  8.0 
+ [  3 ] Test mu :   1.2452819  ==>  Occup :   8.060558  |  target N :  8.0 
+ [  4 ] Test mu :   1.1893309  ==>  Occup :   8.002252  |  target N :  8.0 
+ [  5 ] Test mu :   1.1872563  ==>  Occup :   8.000212  |  target N :  8.0 
+ [  6 ] Test mu :   1.1870410  ==>  Occup :   8.000001  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1870409614580797
+-----------------------------------------------------------------------
+
+190.949497 seconds (855.33 k allocations: 225.673 MiB)
+===== Calculating local green function ... =====
+ 14.335096 seconds (208.13 k allocations: 26.256 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.114261 seconds (176.68 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008495 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [16] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.48704096145807974,1.8870409614580796] ==========
+ [  1 ] Test mu :   0.4870410  ==>  Occup :   7.246555  |  target N :  8.0 
+ [  2 ] Test mu :   1.8870410  ==>  Occup :   8.652486  |  target N :  8.0 
+ [  3 ] Test mu :   1.2373073  ==>  Occup :   8.061437  |  target N :  8.0 
+ [  4 ] Test mu :   1.1807417  ==>  Occup :   8.002655  |  target N :  8.0 
+ [  5 ] Test mu :   1.1783054  ==>  Occup :   8.000263  |  target N :  8.0 
+ [  6 ] Test mu :   1.1780376  ==>  Occup :   8.000001  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1780375877678535
+-----------------------------------------------------------------------
+
+191.184005 seconds (855.34 k allocations: 225.675 MiB)
+===== Calculating local green function ... =====
+ 14.297736 seconds (208.13 k allocations: 26.256 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.111982 seconds (176.67 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008836 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [17] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.47803758776785354,1.8780375877678535] ==========
+ [  1 ] Test mu :   0.4780376  ==>  Occup :   7.244555  |  target N :  8.0 
+ [  2 ] Test mu :   1.8780376  ==>  Occup :   8.651776  |  target N :  8.0 
+ [  3 ] Test mu :   1.2296059  ==>  Occup :   8.063142  |  target N :  8.0 
+ [  4 ] Test mu :   1.1716333  ==>  Occup :   8.003103  |  target N :  8.0 
+ [  5 ] Test mu :   1.1687957  ==>  Occup :   8.000324  |  target N :  8.0 
+ [  6 ] Test mu :   1.1684651  ==>  Occup :   8.000001  |  target N :  8.0 
+ [  7 ] Test mu :   1.1684637  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1684636765674687
+-----------------------------------------------------------------------
+
+223.357258 seconds (997.85 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.415444 seconds (208.11 k allocations: 26.259 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.122049 seconds (176.70 k allocations: 9.288 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008875 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [18] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4684636765674688,1.8684636765674687] ==========
+ [  1 ] Test mu :   0.4684637  ==>  Occup :   7.238837  |  target N :  8.0 
+ [  2 ] Test mu :   1.8684637  ==>  Occup :   8.649615  |  target N :  8.0 
+ [  3 ] Test mu :   1.2238120  ==>  Occup :   8.063250  |  target N :  8.0 
+ [  4 ] Test mu :   1.1658604  ==>  Occup :   8.003329  |  target N :  8.0 
+ [  5 ] Test mu :   1.1628234  ==>  Occup :   8.000359  |  target N :  8.0 
+ [  6 ] Test mu :   1.1624563  ==>  Occup :   8.000002  |  target N :  8.0 
+ [  7 ] Test mu :   1.1624546  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1624545725074746
+-----------------------------------------------------------------------
+
+223.743333 seconds (997.87 k allocations: 270.912 MiB)
+===== Calculating local green function ... =====
+ 14.306603 seconds (208.14 k allocations: 26.265 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.120759 seconds (176.68 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008847 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [19] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4624545725074747,1.8624545725074746] ==========
+ [  1 ] Test mu :   0.4624546  ==>  Occup :   7.238538  |  target N :  8.0 
+ [  2 ] Test mu :   1.8624546  ==>  Occup :   8.649270  |  target N :  8.0 
+ [  3 ] Test mu :   1.2181235  ==>  Occup :   8.064313  |  target N :  8.0 
+ [  4 ] Test mu :   1.1592703  ==>  Occup :   8.003719  |  target N :  8.0 
+ [  5 ] Test mu :   1.1558833  ==>  Occup :   8.000414  |  target N :  8.0 
+ [  6 ] Test mu :   1.1554590  ==>  Occup :   8.000002  |  target N :  8.0 
+ [  7 ] Test mu :   1.1554568  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.155456772897053
+-----------------------------------------------------------------------
+
+223.044059 seconds (997.88 k allocations: 270.917 MiB)
+===== Calculating local green function ... =====
+ 14.338561 seconds (208.14 k allocations: 26.256 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.112212 seconds (176.66 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008241 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [20] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4554567728970531,1.855456772897053] ==========
+ [  1 ] Test mu :   0.4554568  ==>  Occup :   7.235280  |  target N :  8.0 
+ [  2 ] Test mu :   1.8554568  ==>  Occup :   8.646861  |  target N :  8.0 
+ [  3 ] Test mu :   1.2139033  ==>  Occup :   8.067156  |  target N :  8.0 
+ [  4 ] Test mu :   1.1526743  ==>  Occup :   8.004326  |  target N :  8.0 
+ [  5 ] Test mu :   1.1487518  ==>  Occup :   8.000498  |  target N :  8.0 
+ [  6 ] Test mu :   1.1482411  ==>  Occup :   8.000003  |  target N :  8.0 
+ [  7 ] Test mu :   1.1482381  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.148238101574994
+-----------------------------------------------------------------------
+
+223.479423 seconds (997.84 k allocations: 270.913 MiB)
+===== Calculating local green function ... =====
+ 14.332973 seconds (208.14 k allocations: 26.253 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.116144 seconds (176.69 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008384 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [21] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4482381015749941,1.848238101574994] ==========
+ [  1 ] Test mu :   0.4482381  ==>  Occup :   7.224580  |  target N :  8.0 
+ [  2 ] Test mu :   1.8482381  ==>  Occup :   8.645325  |  target N :  8.0 
+ [  3 ] Test mu :   1.2123351  ==>  Occup :   8.068196  |  target N :  8.0 
+ [  4 ] Test mu :   1.1505670  ==>  Occup :   8.004564  |  target N :  8.0 
+ [  5 ] Test mu :   1.1464578  ==>  Occup :   8.000548  |  target N :  8.0 
+ [  6 ] Test mu :   1.1458963  ==>  Occup :   8.000003  |  target N :  8.0 
+ [  7 ] Test mu :   1.1458928  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1458927536635088
+-----------------------------------------------------------------------
+
+223.545734 seconds (997.87 k allocations: 270.913 MiB)
+===== Calculating local green function ... =====
+ 14.374157 seconds (208.12 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.106881 seconds (176.65 k allocations: 9.283 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007535 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [22] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4458927536635089,1.8458927536635088] ==========
+ [  1 ] Test mu :   0.4458928  ==>  Occup :   7.226409  |  target N :  8.0 
+ [  2 ] Test mu :   1.8458928  ==>  Occup :   8.645963  |  target N :  8.0 
+ [  3 ] Test mu :   1.2088277  ==>  Occup :   8.067679  |  target N :  8.0 
+ [  4 ] Test mu :   1.1474503  ==>  Occup :   8.004617  |  target N :  8.0 
+ [  5 ] Test mu :   1.1432880  ==>  Occup :   8.000559  |  target N :  8.0 
+ [  6 ] Test mu :   1.1427141  ==>  Occup :   8.000004  |  target N :  8.0 
+ [  7 ] Test mu :   1.1427105  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1427104930574612
+-----------------------------------------------------------------------
+
+223.546978 seconds (997.81 k allocations: 270.916 MiB)
+===== Calculating local green function ... =====
+ 14.325213 seconds (208.11 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.108040 seconds (176.65 k allocations: 9.283 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007701 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [23] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.44271049305746124,1.8427104930574612] ==========
+ [  1 ] Test mu :   0.4427105  ==>  Occup :   7.227240  |  target N :  8.0 
+ [  2 ] Test mu :   1.8427105  ==>  Occup :   8.644544  |  target N :  8.0 
+ [  3 ] Test mu :   1.2060361  ==>  Occup :   8.069657  |  target N :  8.0 
+ [  4 ] Test mu :   1.1429198  ==>  Occup :   8.005072  |  target N :  8.0 
+ [  5 ] Test mu :   1.1383538  ==>  Occup :   8.000622  |  target N :  8.0 
+ [  6 ] Test mu :   1.1377155  ==>  Occup :   8.000004  |  target N :  8.0 
+ [  7 ] Test mu :   1.1377112  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1377111956816426
+-----------------------------------------------------------------------
+
+223.079605 seconds (997.83 k allocations: 270.912 MiB)
+===== Calculating local green function ... =====
+ 14.359307 seconds (208.12 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.123364 seconds (176.67 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008125 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [24] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.43771119568164263,1.8377111956816425] ==========
+ [  1 ] Test mu :   0.4377112  ==>  Occup :   7.221345  |  target N :  8.0 
+ [  2 ] Test mu :   1.8377112  ==>  Occup :   8.642981  |  target N :  8.0 
+ [  3 ] Test mu :   1.2045158  ==>  Occup :   8.069859  |  target N :  8.0 
+ [  4 ] Test mu :   1.1413841  ==>  Occup :   8.005253  |  target N :  8.0 
+ [  5 ] Test mu :   1.1366683  ==>  Occup :   8.000664  |  target N :  8.0 
+ [  6 ] Test mu :   1.1359852  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1359802  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1359802361869098
+-----------------------------------------------------------------------
+
+223.220416 seconds (997.88 k allocations: 270.915 MiB)
+===== Calculating local green function ... =====
+ 14.324287 seconds (208.12 k allocations: 26.255 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.114508 seconds (176.67 k allocations: 9.284 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008545 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [25] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.43598023618690984,1.8359802361869098] ==========
+ [  1 ] Test mu :   0.4359802  ==>  Occup :   7.222878  |  target N :  8.0 
+ [  2 ] Test mu :   1.8359802  ==>  Occup :   8.643898  |  target N :  8.0 
+ [  3 ] Test mu :   1.2016060  ==>  Occup :   8.069065  |  target N :  8.0 
+ [  4 ] Test mu :   1.1391169  ==>  Occup :   8.005100  |  target N :  8.0 
+ [  5 ] Test mu :   1.1345326  ==>  Occup :   8.000645  |  target N :  8.0 
+ [  6 ] Test mu :   1.1338687  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1338640  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.133863976965854
+-----------------------------------------------------------------------
+
+223.195709 seconds (997.85 k allocations: 270.913 MiB)
+===== Calculating local green function ... =====
+ 14.351961 seconds (208.16 k allocations: 26.265 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.124937 seconds (176.69 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009031 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [26] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4338639769658541,1.833863976965854] ==========
+ [  1 ] Test mu :   0.4338640  ==>  Occup :   7.224275  |  target N :  8.0 
+ [  2 ] Test mu :   1.8338640  ==>  Occup :   8.642866  |  target N :  8.0 
+ [  3 ] Test mu :   1.1994225  ==>  Occup :   8.069691  |  target N :  8.0 
+ [  4 ] Test mu :   1.1363147  ==>  Occup :   8.005148  |  target N :  8.0 
+ [  5 ] Test mu :   1.1316837  ==>  Occup :   8.000637  |  target N :  8.0 
+ [  6 ] Test mu :   1.1310300  ==>  Occup :   8.000004  |  target N :  8.0 
+ [  7 ] Test mu :   1.1310254  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1310254437633007
+-----------------------------------------------------------------------
+
+223.547908 seconds (997.87 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.364007 seconds (208.09 k allocations: 26.257 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.122097 seconds (176.68 k allocations: 9.284 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009359 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [27] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.43102544376330076,1.8310254437633007] ==========
+ [  1 ] Test mu :   0.4310254  ==>  Occup :   7.219973  |  target N :  8.0 
+ [  2 ] Test mu :   1.8310254  ==>  Occup :   8.642520  |  target N :  8.0 
+ [  3 ] Test mu :   1.1986896  ==>  Occup :   8.069847  |  target N :  8.0 
+ [  4 ] Test mu :   1.1355985  ==>  Occup :   8.005323  |  target N :  8.0 
+ [  5 ] Test mu :   1.1308232  ==>  Occup :   8.000680  |  target N :  8.0 
+ [  6 ] Test mu :   1.1301240  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1301189  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1301188659333579
+-----------------------------------------------------------------------
+
+223.936670 seconds (997.89 k allocations: 270.919 MiB)
+===== Calculating local green function ... =====
+ 14.475024 seconds (208.14 k allocations: 26.256 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.159184 seconds (176.68 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.011967 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [28] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4301188659333579,1.8301188659333578] ==========
+ [  1 ] Test mu :   0.4301189  ==>  Occup :   7.222052  |  target N :  8.0 
+ [  2 ] Test mu :   1.8301189  ==>  Occup :   8.643036  |  target N :  8.0 
+ [  3 ] Test mu :   1.1965790  ==>  Occup :   8.068837  |  target N :  8.0 
+ [  4 ] Test mu :   1.1342720  ==>  Occup :   8.005161  |  target N :  8.0 
+ [  5 ] Test mu :   1.1296312  ==>  Occup :   8.000649  |  target N :  8.0 
+ [  6 ] Test mu :   1.1289636  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1289589  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.128958911851775
+-----------------------------------------------------------------------
+
+223.956027 seconds (997.88 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.316691 seconds (208.13 k allocations: 26.261 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.122354 seconds (176.70 k allocations: 9.288 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008967 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [29] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42895891185177515,1.828958911851775] ==========
+ [  1 ] Test mu :   0.4289589  ==>  Occup :   7.219278  |  target N :  8.0 
+ [  2 ] Test mu :   1.8289589  ==>  Occup :   8.643388  |  target N :  8.0 
+ [  3 ] Test mu :   1.1964635  ==>  Occup :   8.069076  |  target N :  8.0 
+ [  4 ] Test mu :   1.1340766  ==>  Occup :   8.005216  |  target N :  8.0 
+ [  5 ] Test mu :   1.1293970  ==>  Occup :   8.000668  |  target N :  8.0 
+ [  6 ] Test mu :   1.1287090  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1287039  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1287039304287168
+-----------------------------------------------------------------------
+
+223.524014 seconds (997.86 k allocations: 270.913 MiB)
+===== Calculating local green function ... =====
+ 14.341323 seconds (208.14 k allocations: 26.262 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.115435 seconds (176.72 k allocations: 9.290 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008509 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [30] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4287039304287168,1.8287039304287167] ==========
+ [  1 ] Test mu :   0.4287039  ==>  Occup :   7.221912  |  target N :  8.0 
+ [  2 ] Test mu :   1.8287039  ==>  Occup :   8.643776  |  target N :  8.0 
+ [  3 ] Test mu :   1.1948267  ==>  Occup :   8.068826  |  target N :  8.0 
+ [  4 ] Test mu :   1.1325658  ==>  Occup :   8.005148  |  target N :  8.0 
+ [  5 ] Test mu :   1.1279397  ==>  Occup :   8.000654  |  target N :  8.0 
+ [  6 ] Test mu :   1.1272661  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1272613  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.127261252684835
+-----------------------------------------------------------------------
+
+222.922308 seconds (997.86 k allocations: 270.916 MiB)
+===== Calculating local green function ... =====
+ 14.373559 seconds (208.13 k allocations: 26.259 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.106460 seconds (176.65 k allocations: 9.283 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007489 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [31] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42726125268483495,1.8272612526848349] ==========
+ [  1 ] Test mu :   0.4272613  ==>  Occup :   7.224734  |  target N :  8.0 
+ [  2 ] Test mu :   1.8272613  ==>  Occup :   8.641984  |  target N :  8.0 
+ [  3 ] Test mu :   1.1930914  ==>  Occup :   8.069476  |  target N :  8.0 
+ [  4 ] Test mu :   1.1301054  ==>  Occup :   8.005250  |  target N :  8.0 
+ [  5 ] Test mu :   1.1253777  ==>  Occup :   8.000649  |  target N :  8.0 
+ [  6 ] Test mu :   1.1247103  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1247055  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.124705507384126
+-----------------------------------------------------------------------
+
+224.263669 seconds (997.88 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.319997 seconds (208.09 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.110266 seconds (176.67 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008005 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [32] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42470550738412594,1.8247055073841258] ==========
+ [  1 ] Test mu :   0.4247055  ==>  Occup :   7.220567  |  target N :  8.0 
+ [  2 ] Test mu :   1.8247055  ==>  Occup :   8.641609  |  target N :  8.0 
+ [  3 ] Test mu :   1.1925965  ==>  Occup :   8.069103  |  target N :  8.0 
+ [  4 ] Test mu :   1.1300612  ==>  Occup :   8.005248  |  target N :  8.0 
+ [  5 ] Test mu :   1.1253434  ==>  Occup :   8.000660  |  target N :  8.0 
+ [  6 ] Test mu :   1.1246644  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1246596  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1246595789121336
+-----------------------------------------------------------------------
+
+223.309933 seconds (997.85 k allocations: 270.913 MiB)
+===== Calculating local green function ... =====
+ 14.306592 seconds (208.13 k allocations: 26.261 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.121115 seconds (176.69 k allocations: 9.287 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009062 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [33] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4246595789121337,1.8246595789121336] ==========
+ [  1 ] Test mu :   0.4246596  ==>  Occup :   7.219512  |  target N :  8.0 
+ [  2 ] Test mu :   1.8246596  ==>  Occup :   8.642186  |  target N :  8.0 
+ [  3 ] Test mu :   1.1927087  ==>  Occup :   8.068806  |  target N :  8.0 
+ [  4 ] Test mu :   1.1304857  ==>  Occup :   8.005125  |  target N :  8.0 
+ [  5 ] Test mu :   1.1258813  ==>  Occup :   8.000646  |  target N :  8.0 
+ [  6 ] Test mu :   1.1252171  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1252124  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1252123684096185
+-----------------------------------------------------------------------
+
+223.968094 seconds (997.87 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.352206 seconds (208.13 k allocations: 26.255 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.115496 seconds (176.66 k allocations: 9.284 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008422 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [34] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4252123684096185,1.8252123684096184] ==========
+ [  1 ] Test mu :   0.4252124  ==>  Occup :   7.221268  |  target N :  8.0 
+ [  2 ] Test mu :   1.8252124  ==>  Occup :   8.642571  |  target N :  8.0 
+ [  3 ] Test mu :   1.1922731  ==>  Occup :   8.068020  |  target N :  8.0 
+ [  4 ] Test mu :   1.1306549  ==>  Occup :   8.004947  |  target N :  8.0 
+ [  5 ] Test mu :   1.1262020  ==>  Occup :   8.000615  |  target N :  8.0 
+ [  6 ] Test mu :   1.1255697  ==>  Occup :   8.000004  |  target N :  8.0 
+ [  7 ] Test mu :   1.1255654  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1255653637689123
+-----------------------------------------------------------------------
+
+223.841324 seconds (997.90 k allocations: 270.918 MiB)
+===== Calculating local green function ... =====
+ 14.352343 seconds (208.13 k allocations: 26.259 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.121519 seconds (176.67 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008849 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [35] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4255653637689123,1.8255653637689122] ==========
+ [  1 ] Test mu :   0.4255654  ==>  Occup :   7.226552  |  target N :  8.0 
+ [  2 ] Test mu :   1.8255654  ==>  Occup :   8.642154  |  target N :  8.0 
+ [  3 ] Test mu :   1.1904883  ==>  Occup :   8.068615  |  target N :  8.0 
+ [  4 ] Test mu :   1.1281589  ==>  Occup :   8.005214  |  target N :  8.0 
+ [  5 ] Test mu :   1.1234541  ==>  Occup :   8.000648  |  target N :  8.0 
+ [  6 ] Test mu :   1.1227861  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1227814  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1227814024973277
+-----------------------------------------------------------------------
+
+223.533008 seconds (997.86 k allocations: 270.918 MiB)
+===== Calculating local green function ... =====
+ 14.351268 seconds (208.12 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.122372 seconds (176.69 k allocations: 9.287 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009094 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [36] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42278140249732776,1.8227814024973277] ==========
+ [  1 ] Test mu :   0.4227814  ==>  Occup :   7.221241  |  target N :  8.0 
+ [  2 ] Test mu :   1.8227814  ==>  Occup :   8.641472  |  target N :  8.0 
+ [  3 ] Test mu :   1.1904470  ==>  Occup :   8.067979  |  target N :  8.0 
+ [  4 ] Test mu :   1.1288161  ==>  Occup :   8.005118  |  target N :  8.0 
+ [  5 ] Test mu :   1.1242062  ==>  Occup :   8.000642  |  target N :  8.0 
+ [  6 ] Test mu :   1.1235447  ==>  Occup :   8.000004  |  target N :  8.0 
+ [  7 ] Test mu :   1.1235401  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1235401043405022
+-----------------------------------------------------------------------
+
+223.252524 seconds (997.87 k allocations: 270.913 MiB)
+===== Calculating local green function ... =====
+ 14.381174 seconds (208.13 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.108938 seconds (176.66 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007692 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [37] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42354010434050227,1.8235401043405022] ==========
+ [  1 ] Test mu :   0.4235401  ==>  Occup :   7.222512  |  target N :  8.0 
+ [  2 ] Test mu :   1.8235401  ==>  Occup :   8.641623  |  target N :  8.0 
+ [  3 ] Test mu :   1.1905575  ==>  Occup :   8.069485  |  target N :  8.0 
+ [  4 ] Test mu :   1.1276316  ==>  Occup :   8.005465  |  target N :  8.0 
+ [  5 ] Test mu :   1.1227170  ==>  Occup :   8.000698  |  target N :  8.0 
+ [  6 ] Test mu :   1.1219971  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1219918  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1219917948975415
+-----------------------------------------------------------------------
+
+223.728513 seconds (997.86 k allocations: 270.912 MiB)
+===== Calculating local green function ... =====
+ 14.334496 seconds (208.12 k allocations: 26.262 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.129119 seconds (176.68 k allocations: 9.285 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.010013 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [38] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42199179489754157,1.8219917948975415] ==========
+ [  1 ] Test mu :   0.4219918  ==>  Occup :   7.217108  |  target N :  8.0 
+ [  2 ] Test mu :   1.8219918  ==>  Occup :   8.640828  |  target N :  8.0 
+ [  3 ] Test mu :   1.1918400  ==>  Occup :   8.070002  |  target N :  8.0 
+ [  4 ] Test mu :   1.1286537  ==>  Occup :   8.005706  |  target N :  8.0 
+ [  5 ] Test mu :   1.1235410  ==>  Occup :   8.000762  |  target N :  8.0 
+ [  6 ] Test mu :   1.1227533  ==>  Occup :   8.000006  |  target N :  8.0 
+ [  7 ] Test mu :   1.1227470  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1227470078018698
+-----------------------------------------------------------------------
+
+223.844775 seconds (997.83 k allocations: 270.913 MiB)
+===== Calculating local green function ... =====
+ 14.365697 seconds (208.12 k allocations: 26.262 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.122571 seconds (176.69 k allocations: 9.287 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009173 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [39] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4227470078018698,1.8227470078018697] ==========
+ [  1 ] Test mu :   0.4227470  ==>  Occup :   7.219267  |  target N :  8.0 
+ [  2 ] Test mu :   1.8227470  ==>  Occup :   8.641851  |  target N :  8.0 
+ [  3 ] Test mu :   1.1910860  ==>  Occup :   8.069549  |  target N :  8.0 
+ [  4 ] Test mu :   1.1282399  ==>  Occup :   8.005531  |  target N :  8.0 
+ [  5 ] Test mu :   1.1232770  ==>  Occup :   8.000728  |  target N :  8.0 
+ [  6 ] Test mu :   1.1225240  ==>  Occup :   8.000006  |  target N :  8.0 
+ [  7 ] Test mu :   1.1225182  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1225181773620592
+-----------------------------------------------------------------------
+
+224.537572 seconds (997.84 k allocations: 270.916 MiB)
+===== Calculating local green function ... =====
+ 14.408309 seconds (208.10 k allocations: 26.255 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.140452 seconds (176.70 k allocations: 9.288 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.014558 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [40] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4225181773620592,1.8225181773620591] ==========
+ [  1 ] Test mu :   0.4225182  ==>  Occup :   7.220468  |  target N :  8.0 
+ [  2 ] Test mu :   1.8225182  ==>  Occup :   8.641401  |  target N :  8.0 
+ [  3 ] Test mu :   1.1905659  ==>  Occup :   8.069560  |  target N :  8.0 
+ [  4 ] Test mu :   1.1276457  ==>  Occup :   8.005517  |  target N :  8.0 
+ [  5 ] Test mu :   1.1226900  ==>  Occup :   8.000715  |  target N :  8.0 
+ [  6 ] Test mu :   1.1219523  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1219467  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1219467375260457
+-----------------------------------------------------------------------
+
+224.994952 seconds (997.85 k allocations: 270.916 MiB)
+===== Calculating local green function ... =====
+ 14.474548 seconds (208.10 k allocations: 26.255 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.123348 seconds (176.70 k allocations: 9.287 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009407 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [41] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4219467375260457,1.8219467375260456] ==========
+ [  1 ] Test mu :   0.4219467  ==>  Occup :   7.221111  |  target N :  8.0 
+ [  2 ] Test mu :   1.8219467  ==>  Occup :   8.642191  |  target N :  8.0 
+ [  3 ] Test mu :   1.1892819  ==>  Occup :   8.067787  |  target N :  8.0 
+ [  4 ] Test mu :   1.1278470  ==>  Occup :   8.005022  |  target N :  8.0 
+ [  5 ] Test mu :   1.1233246  ==>  Occup :   8.000628  |  target N :  8.0 
+ [  6 ] Test mu :   1.1226778  ==>  Occup :   8.000004  |  target N :  8.0 
+ [  7 ] Test mu :   1.1226733  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.122673318893296
+-----------------------------------------------------------------------
+
+225.204787 seconds (997.88 k allocations: 270.920 MiB)
+===== Calculating local green function ... =====
+ 14.442866 seconds (208.11 k allocations: 26.252 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.129118 seconds (176.68 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009831 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [42] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42267331889329607,1.822673318893296] ==========
+ [  1 ] Test mu :   0.4226733  ==>  Occup :   7.223568  |  target N :  8.0 
+ [  2 ] Test mu :   1.8226733  ==>  Occup :   8.642601  |  target N :  8.0 
+ [  3 ] Test mu :   1.1886911  ==>  Occup :   8.069434  |  target N :  8.0 
+ [  4 ] Test mu :   1.1258114  ==>  Occup :   8.005546  |  target N :  8.0 
+ [  5 ] Test mu :   1.1208247  ==>  Occup :   8.000719  |  target N :  8.0 
+ [  6 ] Test mu :   1.1200814  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1200757  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.120075722888776
+-----------------------------------------------------------------------
+
+224.683840 seconds (997.86 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.380832 seconds (208.14 k allocations: 26.262 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.111575 seconds (176.67 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007857 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [43] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42007572288877615,1.820075722888776] ==========
+ [  1 ] Test mu :   0.4200757  ==>  Occup :   7.216686  |  target N :  8.0 
+ [  2 ] Test mu :   1.8200757  ==>  Occup :   8.641049  |  target N :  8.0 
+ [  3 ] Test mu :   1.1899911  ==>  Occup :   8.069637  |  target N :  8.0 
+ [  4 ] Test mu :   1.1271338  ==>  Occup :   8.005528  |  target N :  8.0 
+ [  5 ] Test mu :   1.1221790  ==>  Occup :   8.000717  |  target N :  8.0 
+ [  6 ] Test mu :   1.1214407  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1214351  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1214351491804748
+-----------------------------------------------------------------------
+
+223.763079 seconds (997.87 k allocations: 270.912 MiB)
+===== Calculating local green function ... =====
+ 14.370492 seconds (208.14 k allocations: 26.261 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.108890 seconds (176.68 k allocations: 9.283 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008425 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [44] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42143514918047487,1.8214351491804748] ==========
+ [  1 ] Test mu :   0.4214351  ==>  Occup :   7.220010  |  target N :  8.0 
+ [  2 ] Test mu :   1.8214351  ==>  Occup :   8.642330  |  target N :  8.0 
+ [  3 ] Test mu :   1.1891847  ==>  Occup :   8.069373  |  target N :  8.0 
+ [  4 ] Test mu :   1.1264773  ==>  Occup :   8.005472  |  target N :  8.0 
+ [  5 ] Test mu :   1.1215656  ==>  Occup :   8.000708  |  target N :  8.0 
+ [  6 ] Test mu :   1.1208356  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1208302  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1208301515507588
+-----------------------------------------------------------------------
+
+224.211393 seconds (997.87 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.424431 seconds (208.13 k allocations: 26.255 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.116808 seconds (176.67 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008680 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [45] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42083015155075887,1.8208301515507588] ==========
+ [  1 ] Test mu :   0.4208302  ==>  Occup :   7.218222  |  target N :  8.0 
+ [  2 ] Test mu :   1.8208302  ==>  Occup :   8.641140  |  target N :  8.0 
+ [  3 ] Test mu :   1.1900161  ==>  Occup :   8.069974  |  target N :  8.0 
+ [  4 ] Test mu :   1.1268257  ==>  Occup :   8.005480  |  target N :  8.0 
+ [  5 ] Test mu :   1.1219116  ==>  Occup :   8.000699  |  target N :  8.0 
+ [  6 ] Test mu :   1.1211927  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1211873  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1211873387585805
+-----------------------------------------------------------------------
+
+224.054040 seconds (997.84 k allocations: 270.908 MiB)
+===== Calculating local green function ... =====
+ 14.359988 seconds (208.11 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.117883 seconds (176.68 k allocations: 9.287 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008464 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [46] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4211873387585805,1.8211873387585804] ==========
+ [  1 ] Test mu :   0.4211873  ==>  Occup :   7.217740  |  target N :  8.0 
+ [  2 ] Test mu :   1.8211873  ==>  Occup :   8.641094  |  target N :  8.0 
+ [  3 ] Test mu :   1.1906127  ==>  Occup :   8.070659  |  target N :  8.0 
+ [  4 ] Test mu :   1.1268706  ==>  Occup :   8.005562  |  target N :  8.0 
+ [  5 ] Test mu :   1.1218887  ==>  Occup :   8.000710  |  target N :  8.0 
+ [  6 ] Test mu :   1.1211594  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1211539  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1211539065132539
+-----------------------------------------------------------------------
+
+223.685712 seconds (997.90 k allocations: 270.917 MiB)
+===== Calculating local green function ... =====
+ 14.322203 seconds (208.11 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.107806 seconds (176.68 k allocations: 9.287 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.007839 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [47] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4211539065132539,1.8211539065132538] ==========
+ [  1 ] Test mu :   0.4211539  ==>  Occup :   7.217628  |  target N :  8.0 
+ [  2 ] Test mu :   1.8211539  ==>  Occup :   8.640857  |  target N :  8.0 
+ [  3 ] Test mu :   1.1907571  ==>  Occup :   8.070581  |  target N :  8.0 
+ [  4 ] Test mu :   1.1270738  ==>  Occup :   8.005570  |  target N :  8.0 
+ [  5 ] Test mu :   1.1220837  ==>  Occup :   8.000708  |  target N :  8.0 
+ [  6 ] Test mu :   1.1213572  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1213518  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1213517926505567
+-----------------------------------------------------------------------
+
+223.983382 seconds (997.87 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.428725 seconds (208.11 k allocations: 26.258 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.118146 seconds (176.69 k allocations: 9.288 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008784 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [48] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4213517926505568,1.8213517926505567] ==========
+ [  1 ] Test mu :   0.4213518  ==>  Occup :   7.218260  |  target N :  8.0 
+ [  2 ] Test mu :   1.8213518  ==>  Occup :   8.642143  |  target N :  8.0 
+ [  3 ] Test mu :   1.1899792  ==>  Occup :   8.067623  |  target N :  8.0 
+ [  4 ] Test mu :   1.1287837  ==>  Occup :   8.004939  |  target N :  8.0 
+ [  5 ] Test mu :   1.1243420  ==>  Occup :   8.000615  |  target N :  8.0 
+ [  6 ] Test mu :   1.1237097  ==>  Occup :   8.000004  |  target N :  8.0 
+ [  7 ] Test mu :   1.1237054  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.123705406932999
+-----------------------------------------------------------------------
+
+223.571383 seconds (997.81 k allocations: 270.913 MiB)
+===== Calculating local green function ... =====
+ 14.342767 seconds (208.11 k allocations: 26.252 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.130376 seconds (176.69 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009822 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [49] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4237054069329991,1.823705406932999] ==========
+ [  1 ] Test mu :   0.4237054  ==>  Occup :   7.225027  |  target N :  8.0 
+ [  2 ] Test mu :   1.8237054  ==>  Occup :   8.643194  |  target N :  8.0 
+ [  3 ] Test mu :   1.1887502  ==>  Occup :   8.068528  |  target N :  8.0 
+ [  4 ] Test mu :   1.1265971  ==>  Occup :   8.005140  |  target N :  8.0 
+ [  5 ] Test mu :   1.1219658  ==>  Occup :   8.000636  |  target N :  8.0 
+ [  6 ] Test mu :   1.1213112  ==>  Occup :   8.000004  |  target N :  8.0 
+ [  7 ] Test mu :   1.1213067  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1213066789192347
+-----------------------------------------------------------------------
+
+224.074653 seconds (997.84 k allocations: 270.914 MiB)
+===== Calculating local green function ... =====
+ 14.376036 seconds (208.13 k allocations: 26.259 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.119307 seconds (176.66 k allocations: 9.284 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.008837 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+
+       ============================
+          DMFT_loop [50] 
+       ============================
+
+Reading SelfE_w ... imp[1]
+
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.4213066789192348,1.8213066789192347] ==========
+ [  1 ] Test mu :   0.4213067  ==>  Occup :   7.219482  |  target N :  8.0 
+ [  2 ] Test mu :   1.8213067  ==>  Occup :   8.641491  |  target N :  8.0 
+ [  3 ] Test mu :   1.1897436  ==>  Occup :   8.069397  |  target N :  8.0 
+ [  4 ] Test mu :   1.1269998  ==>  Occup :   8.005291  |  target N :  8.0 
+ [  5 ] Test mu :   1.1222484  ==>  Occup :   8.000663  |  target N :  8.0 
+ [  6 ] Test mu :   1.1215672  ==>  Occup :   8.000005  |  target N :  8.0 
+ [  7 ] Test mu :   1.1215624  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.1215623551897995
+-----------------------------------------------------------------------
+
+223.398276 seconds (997.83 k allocations: 270.912 MiB)
+===== Calculating local green function ... =====
+ 14.360275 seconds (208.13 k allocations: 26.259 MiB)
+
+===== Calculating weiss field from G_loc_iWn ... =====
+  0.126377 seconds (176.68 k allocations: 9.286 MiB)
+
+===== Calculating hybrid function from weiss field ... =====
+  0.009010 seconds (96.37 k allocations: 7.295 MiB)
+
+Writing hyb.json ...
+Writing hyb.json ...
+
+
+
+ CTQMC run ... imp[1]
+ Preparing the input file of EDFMTF : actqmc.cix ...
+0.0
+Br: kindx= [(7, 3), (9, 1), (5, -5), (7, -1), (6, 2), (3, -3), (5, 1), (1, -1), (4, -2), (4, 0), (3, 3), (6, -4), (4, 4), (8, -2), (7, -3), (2, 2), (10, 0), (5, 3), (1, 1), (5, -1), (6, 4), (0, 0), (8, 2), (7, 1), (2, -2), (6, 0), (9, -1), (8, 0), (4, 2), (5, -3), (5, 5), (4, -4), (3, 1), (3, -1), (6, -2), (2, 0)]
+Br: Stage1: Computing F^ in direct base
+Br: Stage2: Compressing F^+ according to its block diagonal form
+Br: Stage3: Renumbers states -- creates superstates for ctqmc
+Br: Stage4: F^dagger matrices between superstates evaluated
+Have HB2
+Number of operators needed 1  0
+off_diagonal=0
+Reading data with 1436 entries
+------------------
+# time-end  Mon Jul 8 21:03:45 KST 2024

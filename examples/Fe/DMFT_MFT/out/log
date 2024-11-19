@@ -1,0 +1,321 @@
+ DFTforge Version 1.4.0
+ JX_VERSION: 0.9.3-pub+20190529
+ Visit https://kaist-elst.github.io/DFTforge.jl/ for details & updates 
+ Tested with Julia v1.0 and v1.1 which the most recent version of Julia in 201906 https://julialang.org/
+ TOML file: fe_kaiedj_dmftmft.toml
+/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier_hr.dat
+/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier.win
+/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier_hr.dat
+/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier.win
+Dict("result_file_up" => "/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier", "result_file_down" => "/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier")
+DFTforge.DFTcommon.Wannier_OptionalInfo(1, [0.0 0.0 0.0], Array{Int64}[[1, 2, 3, 4, 5, 6, 7, 8, 9]])
+ result file is not found result_file_up	/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier
+ result file is not found result_file_down	/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier
+Array{Int64}[[]] AbstractString["all"]
+Array{Int64}[[]] AbstractString["all"]
+Array{Int64}[[]] AbstractString["all"]
+Array{Int64}[[]] AbstractString["all"]
+================================================================
+energy windows
+energywindow_all_list: Vector{Float64}[]
+energywindow_1_list: Vector{Float64}[]
+energywindow_2_list: Vector{Float64}[]
+energywindow_3_list: Vector{Float64}[]
+energywindow_4_list: Vector{Float64}[]
+================================================================
+atom12_list: [(1, 1)]
+q_point_num [2, 2, 2]	k_point_num [2, 2, 2]
+DFT_type Wannier90
+orbital_selection_option nomask
+mask1list Array{Int64}[[]]	mask2list Array{Int64}[[]]
+basisTransformbasisTransform_rule_type(false, Dict{Int64, orbital_rot_type}(), false, Dict{Int64, orbital_downfold_type}(), true, true, Vector{Any}[], custom_transfrom_type[])
+jx.col.dmft.spin.wannier_0.0/wannier.hdf5
+================================================================
+set_current_dftdataset:3
+1
+Array{Int64}[[1, 2, 3, 4, 5, 6, 7, 8, 9]]
+/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier.win
+fermi_energy = 0.0
+/home/users1/hjun/github/hjuntaf/KaiEDJ/examples/Fe/DMFT_MFT/in/wannier.win
+fermi_energy = 0.0
+ basisTransform_init 
+ atomnum_eff 1 orbitalNums_eff [9]
+ orbitalStartIdx_list [0]
+      From worker 25:	set_current_dftdataset:5
+      From worker 27:	set_current_dftdataset:5
+      From worker 19:	set_current_dftdataset:5
+      From worker 14:	set_current_dftdataset:5
+      From worker 2:	set_current_dftdataset:5
+      From worker 20:	set_current_dftdataset:5
+      From worker 7:	set_current_dftdataset:5
+      From worker 15:	set_current_dftdataset:5
+      From worker 26:	set_current_dftdataset:5
+      From worker 21:	set_current_dftdataset:5
+      From worker 31:	set_current_dftdataset:5
+      From worker 30:	set_current_dftdataset:5
+      From worker 11:	set_current_dftdataset:5
+      From worker 17:	set_current_dftdataset:5
+      From worker 28:	set_current_dftdataset:5
+      From worker 29:	set_current_dftdataset:5
+      From worker 22:	set_current_dftdataset:5
+      From worker 18:	set_current_dftdataset:5
+      From worker 16:	set_current_dftdataset:5
+      From worker 3:	set_current_dftdataset:5
+      From worker 9:	set_current_dftdataset:5
+      From worker 6:	set_current_dftdataset:5
+      From worker 13:	set_current_dftdataset:5
+      From worker 12:	set_current_dftdataset:5
+      From worker 10:	set_current_dftdataset:5
+      From worker 4:	set_current_dftdataset:5
+      From worker 23:	set_current_dftdataset:5
+      From worker 24:	set_current_dftdataset:5
+      From worker 8:	set_current_dftdataset:5
+      From worker 5:	set_current_dftdataset:5
+      From worker 32:	set_current_dftdataset:5
+      From worker 33:	set_current_dftdataset:5
+header_dmft_jx = "KaiEDJ"
+ Calculation mode :DMFT+MFT
+┌ Warning: Assignment to `DMFT_loop` in soft scope is ambiguous because a global variable by the same name exists: `DMFT_loop` will be treated as a new local. Disambiguate by using `local DMFT_loop` to suppress this warning or `global DMFT_loop` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:624
+┌ Warning: Assignment to `SelfE_w_new` in soft scope is ambiguous because a global variable by the same name exists: `SelfE_w_new` will be treated as a new local. Disambiguate by using `local SelfE_w_new` to suppress this warning or `global SelfE_w_new` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:632
+┌ Warning: Assignment to `imp_totN` in soft scope is ambiguous because a global variable by the same name exists: `imp_totN` will be treated as a new local. Disambiguate by using `local imp_totN` to suppress this warning or `global imp_totN` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:671
+┌ Warning: Assignment to `imp_dc` in soft scope is ambiguous because a global variable by the same name exists: `imp_dc` will be treated as a new local. Disambiguate by using `local imp_dc` to suppress this warning or `global imp_dc` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:672
+┌ Warning: Assignment to `init_mu` in soft scope is ambiguous because a global variable by the same name exists: `init_mu` will be treated as a new local. Disambiguate by using `local init_mu` to suppress this warning or `global init_mu` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:687
+┌ Warning: Assignment to `mu` in soft scope is ambiguous because a global variable by the same name exists: `mu` will be treated as a new local. Disambiguate by using `local mu` to suppress this warning or `global mu` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:690
+┌ Warning: Assignment to `Occup` in soft scope is ambiguous because a global variable by the same name exists: `Occup` will be treated as a new local. Disambiguate by using `local Occup` to suppress this warning or `global Occup` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:690
+┌ Warning: Assignment to `H_loc` in soft scope is ambiguous because a global variable by the same name exists: `H_loc` will be treated as a new local. Disambiguate by using `local H_loc` to suppress this warning or `global H_loc` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:690
+┌ Warning: Assignment to `G_loc_iWn` in soft scope is ambiguous because a global variable by the same name exists: `G_loc_iWn` will be treated as a new local. Disambiguate by using `local G_loc_iWn` to suppress this warning or `global G_loc_iWn` to assign to the existing global variable.
+└ @ timing.jl:279
+┌ Warning: Assignment to `red_G_loc_iWn` in soft scope is ambiguous because a global variable by the same name exists: `red_G_loc_iWn` will be treated as a new local. Disambiguate by using `local red_G_loc_iWn` to suppress this warning or `global red_G_loc_iWn` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:715
+┌ Warning: Assignment to `G_loc_iWn_mat` in soft scope is ambiguous because a global variable by the same name exists: `G_loc_iWn_mat` will be treated as a new local. Disambiguate by using `local G_loc_iWn_mat` to suppress this warning or `global G_loc_iWn_mat` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:721
+┌ Warning: Assignment to `InvWiess_iWn_mat` in soft scope is ambiguous because a global variable by the same name exists: `InvWiess_iWn_mat` will be treated as a new local. Disambiguate by using `local InvWiess_iWn_mat` to suppress this warning or `global InvWiess_iWn_mat` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:722
+┌ Warning: Assignment to `hyb_iWn_mat` in soft scope is ambiguous because a global variable by the same name exists: `hyb_iWn_mat` will be treated as a new local. Disambiguate by using `local hyb_iWn_mat` to suppress this warning or `global hyb_iWn_mat` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:723
+┌ Warning: Assignment to `InvWiess_iWn` in soft scope is ambiguous because a global variable by the same name exists: `InvWiess_iWn` will be treated as a new local. Disambiguate by using `local InvWiess_iWn` to suppress this warning or `global InvWiess_iWn` to assign to the existing global variable.
+└ @ timing.jl:279
+┌ Warning: Assignment to `hyb_iWn` in soft scope is ambiguous because a global variable by the same name exists: `hyb_iWn` will be treated as a new local. Disambiguate by using `local hyb_iWn` to suppress this warning or `global hyb_iWn` to assign to the existing global variable.
+└ @ timing.jl:279
+┌ Warning: Assignment to `hyb` in soft scope is ambiguous because a global variable by the same name exists: `hyb` will be treated as a new local. Disambiguate by using `local hyb` to suppress this warning or `global hyb` to assign to the existing global variable.
+└ @ ~/github/hjuntaf/KaiEDJ/src/dmft_mft.jl:745
+#####################################################
+ Calculation type : Jx calculation with self-energy (compatible with QMC)
+#####################################################
+
+
+
+  0.225574 seconds (133.96 k allocations: 9.150 MiB, 67.80% compilation time)
+  0.162916 seconds (52.68 k allocations: 3.660 MiB, 70.29% compilation time)
+  0.245067 seconds (103.00 k allocations: 16.981 MiB, 63.19% compilation time)
+  0.110232 seconds (29.41 k allocations: 2.026 MiB, 46.90% compilation time)
+===== loading H_k from tight-binding parameter ... ======
+ 85.775321 seconds (84.69 M allocations: 93.079 GiB, 5.77% gc time, 2.37% compilation time)
+ mu=hamiltonian_info.scf_r.ChemP 0.0
+  0.383913 seconds (91.10 k allocations: 142.911 MiB, 36.59% compilation time)
+
+===== SelfE = imp_dc block initialize ... ===== 
+Impurity [1] : orbital # :2,    Spin type :2
+
+  2.521464 seconds (4.23 M allocations: 317.062 MiB, 98.52% compilation time)
+----------------------------------------------------
+Inequv. orbital index of imp. 1 :[5, 6, 7, 8, 9]
+Diagonal part of Hloc : [-25.829806999999985, -25.829802000000004, -26.155978999999995, -25.82980200000001, -26.155977000000117]
+
+
+  0.599819 seconds (424.95 k allocations: 34.279 MiB, 99.00% compilation time)
+
+ == You turned on the 'consider_degeneracy = true', so from now on degenerate states will be considered equivalently == 
+
+Old imp ind :
+             imp-1
+                        [1, 0, 0, 0, 0]
+                        [0, 1, 0, 0, 0]
+                        [0, 0, 2, 0, 0]
+                        [0, 0, 0, 1, 0]
+                        [0, 0, 0, 0, 2]
+
+New imp ind :
+             imp-1
+                        [1, 0, 0, 0, 0]
+                        [0, 1, 0, 0, 0]
+                        [0, 0, 2, 0, 0]
+                        [0, 0, 0, 1, 0]
+                        [0, 0, 0, 0, 2]
+
+ == You turn on the consider_degeneracy = true, so from now on degenerate states will be considered equivalently == 
+
+imp_ind[i] = [1 0 0 0 0; 0 1 0 0 0; 0 0 2 0 0; 0 0 0 1 0; 0 0 0 0 2]
+===== SelfE = imp_dc block initialize ... ===== 
+Impurity [1] : orbital # :2,    Spin type :2
+
+--------------------------------------
+imp_dc : Any[27.7656932]
+--------------------------------------
+Ineq_atom_Ind = [1]
+Loading self-energy :: 'loadSelfE()'...
+size(SelfE_w) = (1,)
+size(SelfE_w[1]) = (1435, 2, 2)
+Reading SelfE_w (EDMFTF_ctqmc) ... imp[1]
+(DMFT_spin_type, ineq_orbital_Num, linenum - 1) = (2, 2, 1435)
+--------------------------------------
+imp_dc : Any[27.7656932]
+--------------------------------------
+          ===== Finding mu ... =====
+========= Chemical potential finding in range [0.42155999999999993,1.8215599999999998] ==========
+ [  1 ] Test mu :   0.4215600  ==>  Occup :   7.238051  |  target N :  8.0 
+ [  2 ] Test mu :   1.8215600  ==>  Occup :   8.645752  |  target N :  8.0 
+ [  3 ] Test mu :   1.1793416  ==>  Occup :   8.094413  |  target N :  8.0 
+ [  4 ] Test mu :   1.0957965  ==>  Occup :   8.019984  |  target N :  8.0 
+ [  5 ] Test mu :   1.0785653  ==>  Occup :   8.007151  |  target N :  8.0 
+ [  6 ] Test mu :   1.0690386  ==>  Occup :   8.000304  |  target N :  8.0 
+ [  7 ] Test mu :   1.0686108  ==>  Occup :   8.000000  |  target N :  8.0 
+-----------------------------------------------------------------------
+          Chemical potential is founded :1.0686108289423333
+-----------------------------------------------------------------------
+
+ 83.032723 seconds (3.46 M allocations: 497.897 MiB, 1.59% compilation time)
+-------------------------
+Initial latt. mu :1.0686108289423333
+-------------------------
+Up-spin occup :[0.3536488653884829, 0.1497500509858291, 0.149749680863518, 0.1497500509858297, 0.8053003638176364, 0.8052956149021332, 0.9175432608468052, 0.8052956149021325, 0.9175444823063654]
+
+dn-spin occup :[0.3804993961551162, 0.17986439289246742, 0.17986398658998967, 0.17986439289246745, 0.49669284185911927, 0.49669205803890604, 0.26797697512623514, 0.4966920580389061, 0.2679759799684142]
+
+****************************************
+Total charge #:8.000000066560355
+****************************************
+Corr orb ind for atoms: [[5, 6, 7, 8, 9]]
+Occ corr orb up : [0.8053003638176364, 0.8052956149021332, 0.9175432608468052, 0.8052956149021325, 0.9175444823063654]
+Occ corr orb dn : [0.49669284185911927, 0.49669205803890604, 0.26797697512623514, 0.4966920580389061, 0.2679759799684142]
+Occ corr orb tot : [1.3019932056767556, 1.3019876729410393, 1.1855202359730403, 1.3019876729410387, 1.1855204622747797]
+Occ corr orb up-dn : [0.3086075219585171, 0.30860355686322716, 0.64956628572057, 0.30860355686322644, 0.6495685023379512]
+Occu atoms  :Any[6.277009249806653]
+Up-dn atoms :Any[2.2249494237434915]
+****************************************
+Charge for correlated orbitals :6.277009249806653
+Spin-polrization for correlated orbitals :1.1124747118717457
+****************************************
+
+mag_order :
+[1]
+=========== Calculating J for w-segments [1/10] ===========
+ 26.362008 seconds (40.95 M allocations: 6.848 GiB, 5.69% gc time, 11.36% compilation time)
+  9.258515 seconds (15.82 M allocations: 1.803 GiB, 1.02% gc time, 2.63% compilation time)
+Cut off the G & V for making block matrix ...
+  1.274024 seconds (470.88 k allocations: 1.884 GiB, 2.49% gc time, 24.61% compilation time)
+  1.867157 seconds (599.60 k allocations: 2.077 GiB, 3.66% gc time, 40.00% compilation time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.322168 seconds (276.88 k allocations: 1.130 GiB, 20.66% gc time, 10.69% compilation time)
+  1.143149 seconds (146.05 k allocations: 1.122 GiB, 25.74% gc time, 2.92% compilation time)
+372.405736 seconds (2.42 G allocations: 102.012 GiB, 2.51% gc time, 0.73% compilation time)
+=========== Calculating J for w-segments [2/10] ===========
+ 24.792010 seconds (39.82 M allocations: 6.771 GiB, 19.44% gc time)
+ 10.428185 seconds (15.68 M allocations: 1.791 GiB, 14.95% gc time)
+Cut off the G & V for making block matrix ...
+  1.326653 seconds (180 allocations: 1.854 GiB, 29.14% gc time)
+  2.194077 seconds (546 allocations: 2.039 GiB, 51.49% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.711489 seconds (129.61 k allocations: 1.121 GiB, 48.03% gc time)
+  1.467126 seconds (129.61 k allocations: 1.121 GiB, 38.99% gc time)
+347.937507 seconds (2.41 G allocations: 101.776 GiB, 2.65% gc time)
+=========== Calculating J for w-segments [3/10] ===========
+ 25.096835 seconds (39.82 M allocations: 6.771 GiB, 19.88% gc time)
+ 11.021744 seconds (15.68 M allocations: 1.791 GiB, 14.09% gc time)
+Cut off the G & V for making block matrix ...
+  1.349843 seconds (180 allocations: 1.854 GiB, 29.83% gc time)
+  2.245054 seconds (546 allocations: 2.039 GiB, 51.98% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.717629 seconds (129.61 k allocations: 1.121 GiB, 48.02% gc time)
+  1.470312 seconds (129.61 k allocations: 1.121 GiB, 39.05% gc time)
+350.937462 seconds (2.41 G allocations: 101.776 GiB, 2.64% gc time)
+=========== Calculating J for w-segments [4/10] ===========
+ 26.155821 seconds (40.05 M allocations: 6.774 GiB, 19.07% gc time)
+ 11.162755 seconds (15.79 M allocations: 1.793 GiB, 14.53% gc time)
+Cut off the G & V for making block matrix ...
+  1.346431 seconds (180 allocations: 1.854 GiB, 29.59% gc time)
+  2.234124 seconds (546 allocations: 2.039 GiB, 51.99% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.716074 seconds (129.61 k allocations: 1.121 GiB, 48.06% gc time)
+  1.464228 seconds (129.61 k allocations: 1.121 GiB, 39.28% gc time)
+350.986920 seconds (2.41 G allocations: 101.776 GiB, 2.65% gc time)
+=========== Calculating J for w-segments [5/10] ===========
+ 24.953875 seconds (40.32 M allocations: 6.778 GiB, 19.85% gc time)
+ 10.325755 seconds (15.93 M allocations: 1.795 GiB, 14.31% gc time)
+Cut off the G & V for making block matrix ...
+  1.281334 seconds (180 allocations: 1.854 GiB, 28.50% gc time)
+  2.217800 seconds (546 allocations: 2.039 GiB, 51.58% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.687449 seconds (129.61 k allocations: 1.121 GiB, 47.83% gc time)
+  1.426609 seconds (129.61 k allocations: 1.121 GiB, 39.78% gc time)
+352.467955 seconds (2.41 G allocations: 101.776 GiB, 2.60% gc time)
+=========== Calculating J for w-segments [6/10] ===========
+ 25.106343 seconds (40.32 M allocations: 6.778 GiB, 19.91% gc time)
+ 10.181477 seconds (15.93 M allocations: 1.795 GiB, 13.82% gc time)
+Cut off the G & V for making block matrix ...
+  1.301387 seconds (180 allocations: 1.854 GiB, 27.98% gc time)
+  2.217787 seconds (546 allocations: 2.039 GiB, 51.52% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.687591 seconds (129.61 k allocations: 1.121 GiB, 47.82% gc time)
+  1.423964 seconds (129.61 k allocations: 1.121 GiB, 39.83% gc time)
+352.277645 seconds (2.41 G allocations: 101.776 GiB, 2.61% gc time)
+=========== Calculating J for w-segments [7/10] ===========
+ 24.840081 seconds (40.32 M allocations: 6.778 GiB, 19.92% gc time)
+ 10.276915 seconds (15.93 M allocations: 1.795 GiB, 14.13% gc time)
+Cut off the G & V for making block matrix ...
+  1.290294 seconds (180 allocations: 1.854 GiB, 28.92% gc time)
+  2.221189 seconds (546 allocations: 2.039 GiB, 51.52% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.687932 seconds (129.61 k allocations: 1.121 GiB, 47.83% gc time)
+  1.425941 seconds (129.61 k allocations: 1.121 GiB, 39.76% gc time)
+348.096908 seconds (2.41 G allocations: 101.776 GiB, 2.62% gc time)
+=========== Calculating J for w-segments [8/10] ===========
+ 24.496112 seconds (40.32 M allocations: 6.778 GiB, 20.37% gc time)
+ 10.097477 seconds (15.93 M allocations: 1.795 GiB, 13.89% gc time)
+Cut off the G & V for making block matrix ...
+  1.278814 seconds (180 allocations: 1.854 GiB, 28.45% gc time)
+  2.219605 seconds (546 allocations: 2.039 GiB, 51.65% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.693554 seconds (129.61 k allocations: 1.121 GiB, 48.09% gc time)
+  1.431233 seconds (129.61 k allocations: 1.121 GiB, 39.90% gc time)
+351.803717 seconds (2.41 G allocations: 101.776 GiB, 2.61% gc time)
+=========== Calculating J for w-segments [9/10] ===========
+ 24.698121 seconds (40.32 M allocations: 6.778 GiB, 20.22% gc time)
+ 10.253768 seconds (15.93 M allocations: 1.795 GiB, 13.97% gc time)
+Cut off the G & V for making block matrix ...
+  1.282931 seconds (180 allocations: 1.854 GiB, 28.57% gc time)
+  2.219759 seconds (546 allocations: 2.039 GiB, 51.54% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.688497 seconds (129.61 k allocations: 1.121 GiB, 47.85% gc time)
+  1.425441 seconds (129.61 k allocations: 1.121 GiB, 39.81% gc time)
+351.495832 seconds (2.41 G allocations: 101.776 GiB, 2.61% gc time)
+=========== Calculating J for w-segments [10/10] ===========
+ 23.184946 seconds (38.36 M allocations: 6.449 GiB, 20.38% gc time)
+  9.667396 seconds (15.16 M allocations: 1.707 GiB, 14.56% gc time)
+Cut off the G & V for making block matrix ...
+  1.244748 seconds (180 allocations: 1.764 GiB, 29.74% gc time)
+  2.181088 seconds (546 allocations: 1.940 GiB, 53.23% gc time)
+Fourier transform of G : k -> R and k -> -R ...
+  1.656024 seconds (123.31 k allocations: 1.066 GiB, 49.26% gc time)
+  1.387695 seconds (123.31 k allocations: 1.066 GiB, 41.00% gc time)
+328.526686 seconds (2.29 G allocations: 96.829 GiB, 2.62% gc time)
+=================================== AFM order (-) | FM order (+) ===================================
+------------------------------------ Site ind. in cell : (1, 1) ------------------------------------
+       ||  Distance:    0.0000 (Ang)  |  J: 2774.0457 (meV)  |  Cell ind.:      [0, 0, 0]  || 
+       ||  Distance:    2.4855 (Ang)  |  J:   16.6740 (meV)  |  Cell ind.:      [0, 0, 1]  || 
+       ||  Distance:    2.4855 (Ang)  |  J:   16.6740 (meV)  |  Cell ind.:     [0, 0, -1]  || 
+       ||  Distance:    2.4855 (Ang)  |  J:   16.6740 (meV)  |  Cell ind.:      [0, 1, 0]  || 
+       ||  Distance:    2.4855 (Ang)  |  J:   16.6740 (meV)  |  Cell ind.:     [0, -1, 0]  || 
+       ||  Distance:    2.4855 (Ang)  |  J:   16.6740 (meV)  |  Cell ind.:      [1, 0, 0]  || 
+       ||  Distance:    2.4855 (Ang)  |  J:   16.6740 (meV)  |  Cell ind.:      [1, 1, 1]  || 
+       ||  Distance:    2.4855 (Ang)  |  J:   16.6740 (meV)  |  Cell ind.:     [-1, 0, 0]  || 
+       ||  Distance:    2.4855 (Ang)  |  J:   16.6740 (meV)  |  Cell ind.:   [-1, -1, -1]  || 
+       ||  Distance:    2.8700 (Ang)  |  J:    8.7016 (meV)  |  Cell ind.:      [0, 1, 1]  || 
