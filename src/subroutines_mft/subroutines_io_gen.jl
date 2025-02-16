@@ -1,5 +1,6 @@
-using KaiEDJ: Printf
+using Printf
 
+export input_handler, show_input, write_outfile, write_outfile_mat
 
 function input_handler(DMFT_Jx_option)
 

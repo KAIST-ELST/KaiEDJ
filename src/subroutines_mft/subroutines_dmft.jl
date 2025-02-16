@@ -111,28 +111,32 @@ end
 
 #### +DMFT section ####
 
-@everywhere function GreenF_at_agrid_dc(iWn,Kind,spin,SelfE_agrid,testmu)
+#@everywhere 
+function GreenF_at_agrid_dc(iWn,Kind,spin,SelfE_agrid,testmu)
     Gmat = zeros(size(g_H_k[1,1,1,:,:,1]))+zeros(size(g_H_k[1,1,1,:,:,1]))*im 
     Gmat = inv( ( (iWn+testmu)*Matrix{Float64}(I,size(g_H_k[1,1,1,:,:,1]) )) - g_H_k[Kind[1],Kind[2],Kind[3],:,:,spin] - SelfE_agrid + dcMat() )
     return Gmat
 end
 
 
-@everywhere function GreenF_at_agrid(iWn,Kind,spin,SelfE_agrid,testmu)
+#@everywhere 
+function GreenF_at_agrid(iWn,Kind,spin,SelfE_agrid,testmu)
     Gmat = zeros(size(g_H_k[1,1,1,:,:,1]))+zeros(size(g_H_k[1,1,1,:,:,1]))*im 
     Gmat = inv( ( (iWn+testmu)*Matrix{Float64}(I,size(g_H_k[1,1,1,:,:,1]) )) - g_H_k[Kind[1],Kind[2],Kind[3],:,:,spin] - SelfE_agrid )
     return Gmat
 end
 
 
-@everywhere function GreenF_at_agrid_OpenMX(iWn,Kind,spin,testmu)
+#@everywhere 
+function GreenF_at_agrid_OpenMX(iWn,Kind,spin,testmu)
     Gmat = zeros(size(g_H_k[1,1,1,:,:,1]))+zeros(size(g_H_k[1,1,1,:,:,1]))*im 
     Gmat = inv( ( (iWn+testmu)*Matrix{Float64}(I,size(g_H_k[1,1,1,:,:,1]) )) - g_H_k[Kind[1],Kind[2],Kind[3],:,:,spin]  )
     return Gmat
 end
 
 
-@everywhere function SelfE_at_agrid(Wind,spin)
+#@everywhere 
+function SelfE_at_agrid(Wind,spin)
     size_orb    = size(g_H_k[1,1,1,:,:,1])
     SelfE_agrid = zeros(size_orb)+zeros(size_orb)*im
     for j = 1:size(g_Corr_atom_Ind)[1]

@@ -1,7 +1,40 @@
 #### etc. function
+# using Printf
+# using Dierckx
+# using DelimitedFiles
+# using Distributed 
+#module SubroutinesETC
 
-using KaiEDJ: Printf, Dierckx
+
+using Printf
+using Dierckx
 using DelimitedFiles
+using Distributed 
+
+export Shift_H_k, imp_level_shift, cal_corr_ineq_orbital_N, imp_ind_trans_by_degeneracy
+export Tvec_print_from_reading, read_transforMat, read_DFT_corrNele, print_DFT_corrNele
+export beta_cal, FLL_dc, dc_change, go_bareSelfE, maxtag_larger, readmu_fromscflog
+export read_mu_NonIntH, write_mu_NonIntH, read_Nele, write_Nele, init_trans_mat, Trans_H_k
+export Hloc_print, Spec_atEf_print, Tvec_print, Tvec_print_I, Mix_SelfE_, mu_guess
+export change_mu_paramsjson, write_occlog_imp, write_susclog_fromObs, load_suscw0
+export loadOccup_from_obs, loadOccup_from_obs_scalar, write_paramsjson, write_hybjson
+export make_imp_folder, hyb_array2dic, write_occlog_latt, write_scflog_latt, write_scflog_imp
+export Save_logfile, write_dc, loadSelfE, loadSelfE_from_obs_cut, Check_restart_wSelfE
+export Print_IntOccup, init_selfE_dc, init_selfE_zero, init_selfE_dcbias, init_selfE_bias
+export remove_spikes, SelfE_smoothing, duplicatedfnt_atomlist, atom_orb_list, dcMat, dcMat_noglob
+export local_H0, GreenF_at_agrid_realf, G_k_sum_realf, Gloc_gen_realf, Aw_orb, Cal_InvWiess_fromGloc_0
+export Cal_hyb_fromInvWiess_0, cal_norm_implev, SelfE_at_w0, nonInt_H_R2k_internal, nonInt_H_k_OpenMX
+export nonInt_H_k, DC_shift, init_variables_H_k, init_variables_SelfE_w, init_variables_grid_DMFT
+export  init_variables_grid, init_variables_DMFT, passing_dc, init_variables_Jx, init_variables_Jx2
+export init_variables_totorb, G_k_sum, Gloc_gen, reduce_G_loc, reduce_G_loc_mat
+export Cal_Spectral_atEf_givenMu_givenK, Cal_Spectral_atEf_givenMu, Cal_Occupation_givenMu_givenK
+export Cal_Occupation_givenMu, Cal_Occupation_givenMu_givenK_WOdc, Cal_Occupation_givenMu_WOdc
+export Find_mu, Cal_hyb_fromInvWiess, Cal_hybMat_fromInvWiessMat, Cal_InvWiess_fromGloc_at_w
+export Cal_InvWiess_fromGloc, Cal_InvWiessMat_fromGlocMat_at_w
+export Cal_InvWiessMat_fromGlocMat, Cal_interacting_Greenf, V_k_iWn_agrid, Cal_spinpotential_V
+export GreenF_gen_at_kw, GreenF_gen_wDC_at_kw, GreenF_gen, GreenF_gen_OpenMX
+export Take_block_function_G, Take_block_function_V, check_print_version
+export check_write_occupancy, ReadChemInteractin
 
 function Shift_H_k(H_k,lev_shift_mat)
     
@@ -1723,7 +1756,9 @@ function atom_orb_list(hamiltonian_info)
 end
 
 
-@everywhere function dcMat()
+
+#@everywhere 
+function dcMat()
     dc_Mat = zeros(size(g_H_k[1,1,1,:,:,1]))+zeros(size(g_H_k[1,1,1,:,:,1]))*im
     for j = 1:size(g_Corr_atom_Ind)[1]
         
@@ -1793,7 +1828,8 @@ end
 
 
 
-@everywhere function GreenF_at_agrid_realf(w,Kind,spin,SelfE_agrid,testmu,delta)
+#@everywhere 
+function GreenF_at_agrid_realf(w,Kind,spin,SelfE_agrid,testmu,delta)
       
     Gmat = zeros(size(g_H_k[1,1,1,:,:,1]))+zeros(size(g_H_k[1,1,1,:,:,1]))*im 
     Gmat =inv( ( (w+testmu+delta*im)*Matrix{Float64}(I,size(g_H_k[1,1,1,:,:,1]) )) - g_H_k[Kind[1],Kind[2],Kind[3],:,:,spin] - SelfE_agrid )
@@ -1802,7 +1838,8 @@ end
 end
 
 
-@everywhere function G_k_sum_realf(args)
+#@everywhere 
+function G_k_sum_realf(args)
     w = args[1]
     spin = args[2]
     testmu = args[3]
@@ -1907,7 +1944,8 @@ end
 
 
 
-@everywhere function Cal_InvWiess_fromGloc_0(SelfE_realw0,w0ind,G_loc_w0,Corr_atom_Ind,Corr_atom_equiv,Corr_orbital_Ind,DMFT_spin_type)
+#@everywhere 
+function Cal_InvWiess_fromGloc_0(SelfE_realw0,w0ind,G_loc_w0,Corr_atom_Ind,Corr_atom_equiv,Corr_orbital_Ind,DMFT_spin_type)
     InvWiess_w0=[]
     arg_list=[];
     for i =1:size(Corr_atom_equiv)[1]
@@ -1986,7 +2024,8 @@ end
 
 #### Non-interacting Greenfunction section ####
 
-@everywhere function nonInt_H_R2k_internal(args) # Kpoint paralle
+#@everywhere 
+function nonInt_H_R2k_internal(args) # Kpoint paralle
     Kvect = args[1]
     Rvect = args[2]
     H_R = args[3]
@@ -2000,7 +2039,8 @@ end
 end
 
 
-@everywhere function nonInt_H_k_OpenMX(args)
+#@everywhere 
+function nonInt_H_k_OpenMX(args)
     Ktuple = args
     
     totorb =sum(hamiltonian_info.scf_r.Total_NumOrbs)
@@ -2136,7 +2176,8 @@ end
 
 
 
-@everywhere function init_variables_H_k(H_k)
+#@everywhere 
+function init_variables_H_k(H_k)
     global g_H_k
    
     g_H_k = H_k;
@@ -2144,7 +2185,8 @@ end
 end
 
 
-@everywhere function init_variables_SelfE_w(SelfE_w)
+#@everywhere 
+function init_variables_SelfE_w(SelfE_w)
     global g_SelfE_w
    
     #g_SelfE_w = SelfE_w
@@ -2154,7 +2196,8 @@ end
 
 
 
-@everywhere function init_variables_grid_DMFT(iWnlist,Rlist,Klist)
+#@everywhere 
+function init_variables_grid_DMFT(iWnlist,Rlist,Klist)
     global g_iWnlist,g_Rlist,g_Klist
    
     #g_SelfE_w = SelfE_w
@@ -2165,7 +2208,8 @@ end
 end
 
 
-@everywhere function init_variables_grid(Rlist,Klist)
+#@everywhere 
+function init_variables_grid(Rlist,Klist)
     global g_Rlist,g_Klist
    
     #g_SelfE_w = SelfE_w
@@ -2176,7 +2220,8 @@ end
 
 
 
-@everywhere function init_variables_DMFT(Corr_atom_Ind,Corr_orbital_Ind, Corr_atom_equiv, imp_ind, Corr_ineq_orbital_Num, beta, delta)
+#@everywhere 
+function init_variables_DMFT(Corr_atom_Ind,Corr_orbital_Ind, Corr_atom_equiv, imp_ind, Corr_ineq_orbital_Num, beta, delta)
     global g_Corr_atom_Ind, g_Corr_orbital_Ind, g_Corr_atom_equiv, g_imp_ind, g_Corr_ineq_orbital_Num, g_beta, g_delta
    
     g_Corr_atom_Ind = Corr_atom_Ind;
@@ -2191,7 +2236,8 @@ end
 
 
 
-@everywhere function passing_dc(imp_dc)
+#@everywhere 
+function passing_dc(imp_dc)
     global g_imp_dc
    
     g_imp_dc = imp_dc
@@ -2199,7 +2245,8 @@ end
 
 
 
-@everywhere function init_variables_Jx(Corr_atom_Ind,Corr_orbital_Ind, Corr_atom_equiv,imp_ind, beta, Corr_ineq_orbital_Num, delta)
+#@everywhere 
+function init_variables_Jx(Corr_atom_Ind,Corr_orbital_Ind, Corr_atom_equiv,imp_ind, beta, Corr_ineq_orbital_Num, delta)
     global g_Corr_atom_Ind, g_Corr_orbital_Ind, g_Corr_atom_equiv,g_imp_ind,g_beta, g_Corr_ineq_orbital_Num, g_delta
    
     g_Corr_atom_Ind = Corr_atom_Ind;
@@ -2214,7 +2261,8 @@ end
 
 
 
-@everywhere function init_variables_Jx2(Corr_atom_Ind,Corr_orbital_Ind, Corr_atom_equiv,imp_ind, beta, Corr_ineq_orbital_Num, delta)
+#@everywhere 
+function init_variables_Jx2(Corr_atom_Ind,Corr_orbital_Ind, Corr_atom_equiv,imp_ind, beta, Corr_ineq_orbital_Num, delta)
     global g_Corr_atom_Ind, g_Corr_orbital_Ind, g_Corr_atom_equiv,g_imp_ind,g_beta, g_Corr_ineq_orbital_Num, g_delta
    
     g_Corr_atom_Ind = Corr_atom_Ind;
@@ -2229,7 +2277,8 @@ end
 
 
 
-@everywhere function init_variables_totorb(Total_orb_Num)
+#@everywhere 
+function init_variables_totorb(Total_orb_Num)
     global g_Total_orb_Num
    
     #g_SelfE_w = SelfE_w
@@ -2240,7 +2289,8 @@ end
 
 
 
-@everywhere function G_k_sum(args)
+#@everywhere 
+function G_k_sum(args)
     w = args[1]
     spin = args[2]
     testmu = args[3]
@@ -2333,7 +2383,8 @@ end
 
 
 
-@everywhere function Cal_Spectral_atEf_givenMu_givenK(args)
+#@everywhere 
+function Cal_Spectral_atEf_givenMu_givenK(args)
     Kind = args[1];
     spin = args[2];
     testmu = args[3];
@@ -2396,7 +2447,8 @@ end
 
 
 
-@everywhere function Cal_Occupation_givenMu_givenK(args)
+#@everywhere 
+function Cal_Occupation_givenMu_givenK(args)
     Kind = args[1];
     spin = args[2];
     testmu = args[3];
@@ -2460,7 +2512,8 @@ end
 
 
 
-@everywhere function Cal_Occupation_givenMu_givenK_WOdc(args)
+#@everywhere 
+function Cal_Occupation_givenMu_givenK_WOdc(args)
     Kind = args[1];
     spin = args[2];
     testmu = args[3];
@@ -2697,7 +2750,8 @@ end
 
 
 
-@everywhere function Cal_InvWiess_fromGloc_at_w(args)
+#@everywhere 
+function Cal_InvWiess_fromGloc_at_w(args)
     i = args[1];
     w = args[2];
     G_loc_w = args[3];
@@ -2765,7 +2819,8 @@ end
 
 
 
-@everywhere function Cal_InvWiessMat_fromGlocMat_at_w(args)
+#@everywhere 
+function Cal_InvWiessMat_fromGlocMat_at_w(args)
     o_ind = args[1];
     w = args[2];
     red_G_loc_iWn_mat = args[3];
@@ -2779,7 +2834,8 @@ end
 
 
 
-@everywhere function Cal_InvWiessMat_fromGlocMat(iWnlist,red_G_loc_iWn_mat,Corr_atom_Ind,Corr_atom_equiv,Corr_orbital_Ind,DMFT_spin_type)
+#@everywhere 
+function Cal_InvWiessMat_fromGlocMat(iWnlist,red_G_loc_iWn_mat,Corr_atom_Ind,Corr_atom_equiv,Corr_orbital_Ind,DMFT_spin_type)
     InvWiess_iWn_mat=[]
     arg_list = []
 
@@ -2837,7 +2893,8 @@ end
 
 
 
-@everywhere function V_k_iWn_agrid(args)
+#@everywhere 
+function V_k_iWn_agrid(args)
    kind = args[1]
    wind = args[2]
 
@@ -2880,7 +2937,8 @@ end
 
 
 
-@everywhere function GreenF_gen_at_kw(args)
+#@everywhere 
+function GreenF_gen_at_kw(args)
     iWn = args[1]
     kind = args[2]
     wind = args[3]
@@ -2893,7 +2951,8 @@ end
 end
 
 
-@everywhere function GreenF_gen_wDC_at_kw(args)
+#@everywhere 
+function GreenF_gen_wDC_at_kw(args)
     iWn = args[1]
     kind = args[2]
     wind = args[3]
@@ -3020,7 +3079,7 @@ end
 
 
 function check_print_version()
-    X_VERSION = VersionNumber("0.9.3-pub+20190529");
+    X_VERSION = VersionNumber("1.0.0-pub+20250202");
     println(" JX_VERSION: ",X_VERSION)
     println(" Visit https://kaist-elst.github.io/DFTforge.jl/ for details & updates ")
     println(" Tested with Julia v1.0 and v1.1 which the most recent version of Julia in 201906 https://julialang.org/")
@@ -3088,3 +3147,5 @@ function ReadChemInteracting( arg_input_toml_dmft_jx )
         return 0.0
     end
 end
+
+#end

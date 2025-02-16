@@ -1,5 +1,5 @@
 #### EDMFTF related functions
-using KaiEDJ: Printf
+using Printf
 
 
 function R2Csphericalharmonics(Trans_mat, Trans_mat_A, Corr_orbital_Ind)

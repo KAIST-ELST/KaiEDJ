@@ -1,5 +1,5 @@
 ################## Fourier transformation of block G or V by FFTW subroutine
-using KaiEDJ: FFTW
+using FFTW
 
 function FFTW_k2r_block(Klist,Rlist,atom12_list,F_k_iWn_block)
     F_R_iWn_block=[];
@@ -80,7 +80,8 @@ end
 
 ################## Fourier transformdirectly 
 
-@everywhere function fourier_k2r_internal(args) # Kpoint paralle
+#@everywhere 
+function fourier_k2r_internal(args) # Kpoint paralle
     Rvect = args[1]
     Klist = args[2]
     GV_k = args[3]
@@ -145,7 +146,8 @@ end
 
 
 
-@everywhere function fourier_r2k_internal(args) # Kpoint paralle
+#@everywhere 
+function fourier_r2k_internal(args) # Kpoint paralle
     Kvect = args[1]
     Rlist = args[2]
     GV_R = args[3]

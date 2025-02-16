@@ -52,7 +52,8 @@ end
 
 
 
-@everywhere function init_variables_grid_DMFT_realf(wlist,Klist)
+#@everywhere 
+function init_variables_grid_DMFT_realf(wlist,Klist)
     global g_wlist,g_Klist
    
     #g_SelfE_w = SelfE_w

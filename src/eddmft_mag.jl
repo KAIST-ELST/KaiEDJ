@@ -70,7 +70,8 @@ dump( hamiltonian_info )
 # ENV["PROJECT_PATH_ED"]="/Users/jun/dmft/ed/github/KaiED/envs/KED"
 #include("/Users/jun/github/KaiEDJ/src/mybase.jl")
 
-using KaiEDJ: TOML, TickTock
+using KaiEDJ: TOML, TickTock, I
+using LinearAlgebra
 
 @show KaiEDJ.TickTock.tick()
 
