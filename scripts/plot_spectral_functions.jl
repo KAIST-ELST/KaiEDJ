@@ -1,4 +1,4 @@
-using Plots
+using KaiEDJ: Plots
 using DelimitedFiles
 
 dat1_fullname     = "data/Gw_1_1_i7.dat"
@@ -16,9 +16,9 @@ x2_freq = dat2[1,:]
 g2_re   = dat2[2,:]
 g2_im   = dat2[3,:]
 
-plot(  -g1_im, x1_freq, lc=:blue, label="DMFT(spin-up)")
-plot!( -g2_im, x2_freq, lc=:red,  label="DMFT(spin-dn)")
+Plots.plot(  -g1_im, x1_freq, lc=:blue, label="DMFT(spin-up)")
+Plots.plot!( -g2_im, x2_freq, lc=:red,  label="DMFT(spin-dn)")
 
-savefig("output_dmft_lco.png")
-savefig("output_dmft_lco.pdf")
+Plots.savefig("output_dmft_lco.png")
+Plots.savefig("output_dmft_lco.pdf")
 println("The figure of dmft results is saved in output_dmft_lco.png and output_dmft_lco.pdf")

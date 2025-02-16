@@ -1,3 +1,7 @@
+using KaiEDJ
+using KaiEDJ: Printf, TOML
+using DFTforge
+
 ## import DFTforge
 ## 
 ## import Plots
@@ -978,12 +982,12 @@ if ( Calculation_mode == "Jx-DMFT"  || (Calculation_mode == "DMFT+MFT" && DMFT_s
 
     
     
-    @printf "=================================== AFM order (-) | FM order (+) ===================================\n"
+    Printf.@printf "=================================== AFM order (-) | FM order (+) ===================================\n"
     for jj=1:size(atom12_list)[1]
-        @printf "------------------------------------ Site ind. in cell : %s ------------------------------------\n" atom12_list[jj]
+        Printf.@printf "------------------------------------ Site ind. in cell : %s ------------------------------------\n" atom12_list[jj]
         for ii=1:10
     
-            @printf "       ||  Distance: %9.4f (Ang)  |  J: %9.4f (meV)  |  Cell ind.: %14.12s  || \n" sorted_dist[jj][ii] real(sorted_JR[jj][ii]) sorted_cell_ind[jj][ii] 
+            Printf.@printf "       ||  Distance: %9.4f (Ang)  |  J: %9.4f (meV)  |  Cell ind.: %14.12s  || \n" sorted_dist[jj][ii] real(sorted_JR[jj][ii]) sorted_cell_ind[jj][ii] 
         end
     end
     
@@ -1241,12 +1245,12 @@ if ( Calculation_mode == "Jx-DMFT-private" ||  (Calculation_mode == "DMFT+MFT" &
 
     
     
-    @printf "=================================== AFM order (-) | FM order (+) ===================================\n"
+    Printf.@printf "=================================== AFM order (-) | FM order (+) ===================================\n"
     for jj=1:size(atom12_list)[1]
-        @printf "------------------------------------ Site ind. in cell : %s ------------------------------------\n" atom12_list[jj]
+        Printf.@printf "------------------------------------ Site ind. in cell : %s ------------------------------------\n" atom12_list[jj]
         for ii=1:10
     
-            @printf "       ||  Distance: %9.4f (Ang)  |  J: %9.4f (meV)  |  Cell ind.: %14.12s  || \n" sorted_dist[jj][ii] real(sorted_JR[jj][ii]) sorted_cell_ind[jj][ii] 
+            Printf.@printf "       ||  Distance: %9.4f (Ang)  |  J: %9.4f (meV)  |  Cell ind.: %14.12s  || \n" sorted_dist[jj][ii] real(sorted_JR[jj][ii]) sorted_cell_ind[jj][ii] 
         end
     end
     
@@ -1336,12 +1340,12 @@ if ( Calculation_mode == "Jx0" || Calculation_mode == "MFT" )
 
     
     
-    @printf "=================================== AFM order (-) | FM order (+) ===================================\n"
+    Printf.@printf "=================================== AFM order (-) | FM order (+) ===================================\n"
     for jj=1:size(atom12_list)[1]
-        @printf "------------------------------------ Site ind. in cell : %s ------------------------------------\n" atom12_list[jj]
+        Printf.@printf "------------------------------------ Site ind. in cell : %s ------------------------------------\n" atom12_list[jj]
         for ii=1:10
     
-            @printf "       ||  Distance: %9.4f (Ang)  |  J: %9.4f (meV)  |  Cell ind.: %14.12s  || \n" sorted_dist[jj][ii] real(sorted_JR[jj][ii]) sorted_cell_ind[jj][ii] 
+            Printf.@printf "       ||  Distance: %9.4f (Ang)  |  J: %9.4f (meV)  |  Cell ind.: %14.12s  || \n" sorted_dist[jj][ii] real(sorted_JR[jj][ii]) sorted_cell_ind[jj][ii] 
         end
     end
     
@@ -1923,25 +1927,25 @@ function print_magnon(xpt, Magnon_disp, lattind, kindex)
     uniq_magnon = Magnon_disp
     
     open("magnon.dat", "w") do io
-        @printf(io,"    %14s", "kpt")
+        Printf.@printf(io,"    %14s", "kpt")
         for i=1:size(uniq_magnon)[2]
             push!(max_ene_arr, maximum(abs.(real(uniq_magnon[:,i]))) )
             tag = string("disp_",i,)
             if i !=size(uniq_magnon)[2]
-                @printf(io,"    %14s", tag)
+                Printf.@printf(io,"    %14s", tag)
             else
-                @printf(io,"    %14s\n", tag)
+                Printf.@printf(io,"    %14s\n", tag)
             end            
         end
         
         for i=1:size(uniq_magnon)[1]
-            @printf(io,"    %14.8f", xpt[i])
+            Printf.@printf(io,"    %14.8f", xpt[i])
             for j=1:size(uniq_magnon)[2]
                 tag = string("disp_",j,)
                 if j !=size(uniq_magnon)[2]
-                    @printf(io,"    %14.8f", real(uniq_magnon[i,j]))
+                    Printf.@printf(io,"    %14.8f", real(uniq_magnon[i,j]))
                 else
-                    @printf(io,"    %14.8f\n", real(uniq_magnon[i,j]))
+                    Printf.@printf(io,"    %14.8f\n", real(uniq_magnon[i,j]))
                 end            
             end           
         end
@@ -1951,8 +1955,8 @@ function print_magnon(xpt, Magnon_disp, lattind, kindex)
     max_ene = maximum(max_ene_arr)
     open("vline.dat", "w") do io
         for i =2:(size(lattind)[1]-1)
-            @printf(io,"%8.4f  %8.4f\n",xpt[lattind[i]],0.0)
-            @printf(io,"%8.4f  %8.4f\n\n",xpt[lattind[i]],max_ene*1.3)
+            Printf.@printf(io,"%8.4f  %8.4f\n",xpt[lattind[i]],0.0)
+            Printf.@printf(io,"%8.4f  %8.4f\n\n",xpt[lattind[i]],max_ene*1.3)
         end
     end
         
@@ -1960,10 +1964,10 @@ function print_magnon(xpt, Magnon_disp, lattind, kindex)
     
 
     open("magnon.gnu", "w") do io
-        @printf(io,"set xra [%8.4f: %8.4f]\n",xpt[1],xpt[end])
-        @printf(io,"set yra [%8.4f: %8.4f]\n",0.0,max_ene*1.3)
-        @printf(io, "set ylabel \"Energy (meV)\" \n")
-        @printf(io,"set xtics (")
+        Printf.@printf(io,"set xra [%8.4f: %8.4f]\n",xpt[1],xpt[end])
+        Printf.@printf(io,"set yra [%8.4f: %8.4f]\n",0.0,max_ene*1.3)
+        Printf.@printf(io, "set ylabel \"Energy (meV)\" \n")
+        Printf.@printf(io,"set xtics (")
         for (i,v) in enumerate(lattind)
             if i == 1
                 str = kindex[i]
@@ -1977,11 +1981,11 @@ function print_magnon(xpt, Magnon_disp, lattind, kindex)
                 end
             end
             
-            @printf(io,"\"%s\" ",str)
+            Printf.@printf(io,"\"%s\" ",str)
             if i != size(lattind)[1]
-                @printf(io," %8.4f,",xpt[v])
+                Printf.@printf(io," %8.4f,",xpt[v])
             else
-                @printf(io," %8.4f)\n",xpt[v])
+                Printf.@printf(io," %8.4f)\n",xpt[v])
             end
    
             
@@ -1989,14 +1993,14 @@ function print_magnon(xpt, Magnon_disp, lattind, kindex)
         
         for i=1:size(uniq_magnon)[2]
             if i==1
-                @printf(io,"plot \"magnon.dat\" u 1:%i w l \n",i+1)
+                Printf.@printf(io,"plot \"magnon.dat\" u 1:%i w l \n",i+1)
             else
-                @printf(io,"replot \"magnon.dat\" u 1:%i w l \n",i+1)
+                Printf.@printf(io,"replot \"magnon.dat\" u 1:%i w l \n",i+1)
             end            
         end
-        @printf(io,"replot \"vline.dat\" u 1:2 w l lc 0 \n")
+        Printf.@printf(io,"replot \"vline.dat\" u 1:2 w l lc 0 \n")
         
-        @printf(io,"pause -1\n")        
+        Printf.@printf(io,"pause -1\n")        
 
     end
 end

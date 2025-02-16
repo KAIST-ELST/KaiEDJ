@@ -1,3 +1,5 @@
+import KaiEDJ
+
 include("src/load_dftforge.jl")
 
 Calculation_mode    = arg_input.Optional["KaiEDJ"].Calculation_mode

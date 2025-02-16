@@ -1,17 +1,18 @@
 import DFTforge
+import KaiEDJ
 
-import Plots
-import FFTW
-import JSON
-import Dierckx
-using JSON
-using ImageFiltering
-using Dierckx
+# import Plots
+# import FFTW
+# import JSON
+# import Dierckx
+# using JSON
+# using ImageFiltering
+# using Dierckx
 using Distributed
-using DelimitedFiles
-using Printf
-using LinearAlgebra
-using TOML
+# using DelimitedFiles
+# using Printf
+# using LinearAlgebra
+# using TOML
 
 include("subroutines_mft/subroutines_edmftf.jl")        #### EDMFTF related functions
 include("subroutines_mft/subroutines_etc.jl")           #### etc. function

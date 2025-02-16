@@ -1,13 +1,14 @@
 using DelimitedFiles
-using HDF5
-using TOML
+using KaiEDJ: HDF5, TOML
+#using HDF5
+#using TOML
 using LinearAlgebra
 
 
 
 @inline function ReadHDF5Component( hdf5_fname, attr_name ) 
-    fr  = h5open( hdf5_fname, "r" )
-    dat = read( fr, attr_name )
+    fr  = HDF5.h5open( hdf5_fname, "r" )
+    dat = HDF5.read( fr, attr_name )
     close(fr)
     return dat
 end

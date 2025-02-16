@@ -1,5 +1,8 @@
 #### etc. function
 
+using KaiEDJ: Printf, Dierckx
+using DelimitedFiles
+
 function Shift_H_k(H_k,lev_shift_mat)
     
     H_k_dum = deepcopy(H_k)
@@ -168,8 +171,8 @@ function print_DFT_corrNele(Ineq_atom_Ind, Corr_orbital_Ind, Corr_atom_equiv, Oc
     open("DFT_CorrNele.dat", "w") do io
         for it in Ineq_atom_Ind
             orb_ind = Corr_orbital_Ind[findall(x->x==it, Corr_atom_equiv)][1]
-            @printf(io, "latt. %2i :", it )
-            @printf(io," %10.6f\n", sum(diag(real(Occup[orb_ind,orb_ind,1]))) * 2.0)
+            Printf.@printf(io, "latt. %2i :", it )
+            Printf.@printf(io," %10.6f\n", sum(diag(real(Occup[orb_ind,orb_ind,1]))) * 2.0)
             push!(dft_corrN, sum(diag(real(Occup[orb_ind,orb_ind,1]))) * 2.0)
         end
     end 
@@ -269,7 +272,7 @@ end
 
 function write_mu_NonIntH(mu)
     open("mu_NonIntH.dat", "w") do io
-        @printf(io," %30.24f", mu)
+        Printf.@printf(io," %30.24f", mu)
     end
 end
 
@@ -285,7 +288,7 @@ end
 
 function write_Nele(targetN)
     open("Nele.dat", "w") do io
-        @printf(io," %10.6f", targetN)
+        Printf.@printf(io," %10.6f", targetN)
     end
 end
 
@@ -329,36 +332,36 @@ function Hloc_print(filename, H_loc ,Corr_atom_Ind, Corr_atom_equiv, Corr_orbita
     #file_n2 = string("Hloc_rot.dat")
     open(file_n, "w") do io
         for i = 1:size(Corr_atom_Ind)[1]
-            @printf(io,"atom[%2i]\n\n",i)
+            Printf.@printf(io,"atom[%2i]\n\n",i)
             orb_ind = Corr_orbital_Ind[i]
             Hloc = H_loc[orb_ind,orb_ind,1]
             for j = 1:size(Hloc)[1]
                 for jj = 1:size(Hloc)[2]
                     if jj != size(Hloc)[2]
-                        @printf(io,"%14.8f %14.8f     ", real(Hloc[j,jj]),imag(Hloc[j,jj])  )
+                        Printf.@printf(io,"%14.8f %14.8f     ", real(Hloc[j,jj]),imag(Hloc[j,jj])  )
                     else
-                        @printf(io,"%14.8f %14.8f\n", real(Hloc[j,jj]),imag(Hloc[j,jj])  )
+                        Printf.@printf(io,"%14.8f %14.8f\n", real(Hloc[j,jj]),imag(Hloc[j,jj])  )
                     end
                 end
             end
-            @printf(io,"\n\n"  )
+            Printf.@printf(io,"\n\n"  )
         end
     end
     
     #open(file_n2, "w") do io
     #    for i = 1:size(Corr_atom_Ind)[1]
-    #        @printf(io,"atom[%2i]\n\n",i)
+    #        Printf.@printf(io,"atom[%2i]\n\n",i)
 
     #        for j = 1:size(H_loc_rot[i])[1]
     #            for jj = 1:size(H_loc_rot[i])[2]
     #                if jj != size(H_loc_rot[i])[2]
-    #                    @printf(io,"%14.8f %14.8f     ", real(H_loc_rot[i][j,jj]),imag(H_loc_rot[i][j,jj])  )
+    #                    Printf.@printf(io,"%14.8f %14.8f     ", real(H_loc_rot[i][j,jj]),imag(H_loc_rot[i][j,jj])  )
     #                else
-    #                    @printf(io,"%14.8f %14.8f\n", real(H_loc_rot[i][j,jj]),imag(H_loc_rot[i][j,jj])  )
+    #                    Printf.@printf(io,"%14.8f %14.8f\n", real(H_loc_rot[i][j,jj]),imag(H_loc_rot[i][j,jj])  )
     #                end
     #            end
     #        end
-    #        @printf(io,"\n\n"  )
+    #        Printf.@printf(io,"\n\n"  )
     #    end
     #end    
     
@@ -373,19 +376,19 @@ function Spec_atEf_print(Spec_atEf, Corr_atom_Ind, Corr_atom_equiv, Corr_orbital
     file_n = string("Spec_atEf.dat")
     open(file_n, "w") do io
         for i = 1:size(Corr_atom_Ind)[1]
-            @printf(io,"atom[%2i]\n\n",i)
+            Printf.@printf(io,"atom[%2i]\n\n",i)
             orb_ind = Corr_orbital_Ind[i]
             Spec_ = Spec_atEf[orb_ind,orb_ind,1]
             for j = 1:size(Spec_)[1]
                 for jj = 1:size(Spec_)[2]
                     if jj != size(Spec_)[2]
-                        @printf(io,"%14.8f %14.8f     ", real(Spec_[j,jj]),imag(Spec_[j,jj])  )
+                        Printf.@printf(io,"%14.8f %14.8f     ", real(Spec_[j,jj]),imag(Spec_[j,jj])  )
                     else
-                        @printf(io,"%14.8f %14.8f\n", real(Spec_[j,jj]),imag(Spec_[j,jj])  )
+                        Printf.@printf(io,"%14.8f %14.8f\n", real(Spec_[j,jj]),imag(Spec_[j,jj])  )
                     end
                 end
             end
-            @printf(io,"\n\n"  )
+            Printf.@printf(io,"\n\n"  )
         end
     end
     
@@ -401,7 +404,7 @@ function Tvec_print(Aw, nomal_implev, Corr_atom_Ind, Corr_atom_equiv, Corr_orbit
     file_n = string("transform_Mat.dat")
     open(file_n, "w") do io
         for i = 1:size(Corr_atom_Ind)[1]
-            @printf(io,"atom[%2i]\n\n",i)
+            Printf.@printf(io,"atom[%2i]\n\n",i)
             orb_ind = Corr_orbital_Ind[i]
             
             if (basis_transform == "spec")
@@ -411,13 +414,13 @@ function Tvec_print(Aw, nomal_implev, Corr_atom_Ind, Corr_atom_equiv, Corr_orbit
                 for j = 1:size(Tvec)[1]
                     for jj = 1:size(Tvec)[2]
                         if jj != size(Tvec)[2]
-                            @printf(io,"%20.16f %20.16f   ", Tvec[j,jj], 0.0  )
+                            Printf.@printf(io,"%20.16f %20.16f   ", Tvec[j,jj], 0.0  )
                         else
-                            @printf(io,"%20.16f %20.16f\n", Tvec[j,jj], 0.0  )
+                            Printf.@printf(io,"%20.16f %20.16f\n", Tvec[j,jj], 0.0  )
                         end
                     end
                 end            
-                @printf(io,"\n\n"  )
+                Printf.@printf(io,"\n\n"  )
             elseif (basis_transform == "hyb")
                 Tvec = eigvecs(real(nomal_implev[i]))'
                 Trans_mat_A[orb_ind,orb_ind] = deepcopy(Tvec)
@@ -425,13 +428,13 @@ function Tvec_print(Aw, nomal_implev, Corr_atom_Ind, Corr_atom_equiv, Corr_orbit
                 for j = 1:size(Tvec)[1]
                     for jj = 1:size(Tvec)[2]
                         if jj != size(Tvec)[2]
-                            @printf(io,"%20.16f %20.16f   ", Tvec[j,jj], 0.0  )
+                            Printf.@printf(io,"%20.16f %20.16f   ", Tvec[j,jj], 0.0  )
                         else
-                            @printf(io,"%20.16f %20.16f\n", Tvec[j,jj], 0.0  )
+                            Printf.@printf(io,"%20.16f %20.16f\n", Tvec[j,jj], 0.0  )
                         end
                     end
                 end            
-                @printf(io,"\n\n"  )                
+                Printf.@printf(io,"\n\n"  )                
                 
             end
             
@@ -448,7 +451,7 @@ function Tvec_print_I(H_k, Corr_atom_Ind, Corr_atom_equiv, Corr_orbital_Ind)
     file_n = string("transform_Mat.dat")
     open(file_n, "w") do io
         for i = 1:size(Corr_atom_Ind)[1]
-            @printf(io,"atom[%2i]\n\n",i)
+            Printf.@printf(io,"atom[%2i]\n\n",i)
             orb_ind = Corr_orbital_Ind[i]
             Tvec = deepcopy(Trans_mat_A[orb_ind,orb_ind])
 
@@ -456,13 +459,13 @@ function Tvec_print_I(H_k, Corr_atom_Ind, Corr_atom_equiv, Corr_orbital_Ind)
             for j = 1:size(Tvec)[1]
                 for jj = 1:size(Tvec)[2]
                     if jj != size(Tvec)[2]
-                        @printf(io,"%20.16f %20.16f   ", Tvec[j,jj], 0.0  )
+                        Printf.@printf(io,"%20.16f %20.16f   ", Tvec[j,jj], 0.0  )
                     else
-                        @printf(io,"%20.16f %20.16f\n", Tvec[j,jj], 0.0  )
+                        Printf.@printf(io,"%20.16f %20.16f\n", Tvec[j,jj], 0.0  )
                     end
                 end
             end
-            @printf(io,"\n\n"  )
+            Printf.@printf(io,"\n\n"  )
         end
     end
     return Trans_mat, Trans_mat_A
@@ -543,7 +546,7 @@ function write_occlog_imp(Ineq_atom_Ind, imp_ind, DMFT_spin_type, Corr_ineq_orbi
                 occup_mat[1:size(imp_ind[i])[1],1:size(imp_ind[i])[1],2] = deepcopy(imp_ind[i])
             end
             occup_mat = deepcopy(convert(Array{Float64,3}, occup_mat))
-            @printf(io, "imp. %3i :", i )
+            Printf.@printf(io, "imp. %3i :", i )
             for or = 1:Corr_ineq_orbital_Num[i]
                 for s = 1:DMFT_spin_type
                     o_ind = findall(x->x==convert(Float64,or),occup_mat[:,:,s])
@@ -560,27 +563,27 @@ function write_occlog_imp(Ineq_atom_Ind, imp_ind, DMFT_spin_type, Corr_ineq_orbi
                 if DMFT_spin_type == 1
                     if DMFT_solver == "ComCTQMC"
                         if or != size(imp_ind[i])[1]
-                            @printf(io," %10.6f,", occup_mat[or,or,1] * 2.0)
+                            Printf.@printf(io," %10.6f,", occup_mat[or,or,1] * 2.0)
                         else
-                            @printf(io," %10.6f,  n : %10.6f\n", occup_mat[or,or,1] * 2.0, sum( diag(occup_mat[:,:,1]) )*2.0  )
+                            Printf.@printf(io," %10.6f,  n : %10.6f\n", occup_mat[or,or,1] * 2.0, sum( diag(occup_mat[:,:,1]) )*2.0  )
                         end
                     elseif DMFT_solver == "EDMFTF_ctqmc"
                         if or != size(imp_ind[i])[1]
-                            @printf(io," %10.6f,", occup_mat[or,or,1] )
+                            Printf.@printf(io," %10.6f,", occup_mat[or,or,1] )
                         else
-                            @printf(io," %10.6f,  n : %10.6f\n", occup_mat[or,or,1] , sum( diag(occup_mat[:,:,1]) ) )
+                            Printf.@printf(io," %10.6f,  n : %10.6f\n", occup_mat[or,or,1] , sum( diag(occup_mat[:,:,1]) ) )
                         end
                     end
                 elseif DMFT_spin_type ==2
                     if or != size(imp_ind[i])[1]
-                        @printf(io," %10.6f,", occup_mat[or,or,1] +occup_mat[or,or,2])
+                        Printf.@printf(io," %10.6f,", occup_mat[or,or,1] +occup_mat[or,or,2])
                     else
-                        @printf(io," %10.6f,  [↑ : %5.3f, ↓ : %5.3f, m : %5.3f, n : %10.6f]\n", occup_mat[or,or,1] +occup_mat[or,or,2], sum( diag(occup_mat[:,:,1]) ), sum( diag(occup_mat[:,:,2]) ), sum( diag(occup_mat[:,:,1]) )-sum( diag(occup_mat[:,:,2]) ), sum( diag(occup_mat[:,:,1]) )+sum( diag(occup_mat[:,:,2]) )     )   
+                        Printf.@printf(io," %10.6f,  [↑ : %5.3f, ↓ : %5.3f, m : %5.3f, n : %10.6f]\n", occup_mat[or,or,1] +occup_mat[or,or,2], sum( diag(occup_mat[:,:,1]) ), sum( diag(occup_mat[:,:,2]) ), sum( diag(occup_mat[:,:,1]) )-sum( diag(occup_mat[:,:,2]) ), sum( diag(occup_mat[:,:,1]) )+sum( diag(occup_mat[:,:,2]) )     )   
                     end
                 end
             end
         end
-        @printf(io, "-------------------------------------------------------------------------------------------\n\n\n",  )
+        Printf.@printf(io, "-------------------------------------------------------------------------------------------\n\n\n",  )
    
         
     end
@@ -592,7 +595,7 @@ end
 
 function write_susclog_fromObs(DMFT_loop,Ineq_atom_Ind,DMFT_solver)
     open("susc.log", "a") do io
-        @printf(io, "Iter.[%3i]|   ", DMFT_loop)
+        Printf.@printf(io, "Iter.[%3i]|   ", DMFT_loop)
         
         if DMFT_solver == "ComCTQMC"
             for it in Ineq_atom_Ind
@@ -600,9 +603,9 @@ function write_susclog_fromObs(DMFT_loop,Ineq_atom_Ind,DMFT_solver)
                 obser=readJSON(str)
             
                 if it != Ineq_atom_Ind[end]
-                    @printf(io,"(imp %2i)   \"N\": %10.6f,   \"Sz\": %10.6f,     ",it, obser["partition"]["susceptibility"]["N"]["function"][1], obser["partition"]["susceptibility"]["Sz"]["function"][1])
+                    Printf.@printf(io,"(imp %2i)   \"N\": %10.6f,   \"Sz\": %10.6f,     ",it, obser["partition"]["susceptibility"]["N"]["function"][1], obser["partition"]["susceptibility"]["Sz"]["function"][1])
                 else
-                    @printf(io,"(imp %2i)   \"N\": %10.6f,   \"Sz\": %10.6f |\n",it, obser["partition"]["susceptibility"]["N"]["function"][1], obser["partition"]["susceptibility"]["Sz"]["function"][1])
+                    Printf.@printf(io,"(imp %2i)   \"N\": %10.6f,   \"Sz\": %10.6f |\n",it, obser["partition"]["susceptibility"]["N"]["function"][1], obser["partition"]["susceptibility"]["Sz"]["function"][1])
                 end
             end
         elseif DMFT_solver == "EDMFTF_ctqmc"
@@ -619,11 +622,11 @@ function write_susclog_fromObs(DMFT_loop,Ineq_atom_Ind,DMFT_solver)
                 
                     if it != Ineq_atom_Ind[end]
                    
-                        @printf(io,"(imp %2i)   \"N\": %10.6f,   \"Sz\": %10.6f,     ",it, numbers[4], numbers[3])
+                        Printf.@printf(io,"(imp %2i)   \"N\": %10.6f,   \"Sz\": %10.6f,     ",it, numbers[4], numbers[3])
                
                     else
                     
-                        @printf(io,"(imp %2i)   \"N\": %10.6f,   \"Sz\": %10.6f |\n",it, numbers[4], numbers[3])
+                        Printf.@printf(io,"(imp %2i)   \"N\": %10.6f,   \"Sz\": %10.6f |\n",it, numbers[4], numbers[3])
                 
                     end
                
@@ -983,41 +986,41 @@ end
 
 function write_occlog_latt(DMFT_loop, Ineq_atom_Ind, Corr_orbital_Ind, Corr_atom_equiv, imp_dc, mu, Occup, DMFT_spin_type)
     open("occ.log", "a") do io
-        @printf(io, "Iteration [%3i],    latt_mu : %10.6f,    imp_mu :", DMFT_loop, mu)
+        Printf.@printf(io, "Iteration [%3i],    latt_mu : %10.6f,    imp_mu :", DMFT_loop, mu)
         for it in Ineq_atom_Ind
-            @printf(io," %10.6f,", mu )#imp_dc[it]+mu  
+            Printf.@printf(io," %10.6f,", mu )#imp_dc[it]+mu  
         end
         
         if DMFT_spin_type == 1
-            @printf(io, ",    Total_N : %10.6f\n", sum(real(diag(Occup[:,:,1])))*2 )
+            Printf.@printf(io, ",    Total_N : %10.6f\n", sum(real(diag(Occup[:,:,1])))*2 )
         elseif DMFT_spin_type ==2
-            @printf(io, ",    Total_N : %10.6f\n", sum(real(diag(Occup[:,:,1]+Occup[:,:,2]))) )
+            Printf.@printf(io, ",    Total_N : %10.6f\n", sum(real(diag(Occup[:,:,1]+Occup[:,:,2]))) )
         end
         
         
-        @printf(io, "===========================================================================================\n",  )
+        Printf.@printf(io, "===========================================================================================\n",  )
         for it in Ineq_atom_Ind
             orb_ind = Corr_orbital_Ind[findall(x->x==it, Corr_atom_equiv)][1]
-            @printf(io, "latt. %2i :", it )
+            Printf.@printf(io, "latt. %2i :", it )
             for or = 1:size(orb_ind)[1]
                 if DMFT_spin_type == 1
                     if or != size(orb_ind)[1]
-                        @printf(io," %10.6f,", diag(real(Occup[orb_ind,orb_ind,1]))[or] * 2.0)
+                        Printf.@printf(io," %10.6f,", diag(real(Occup[orb_ind,orb_ind,1]))[or] * 2.0)
                     else
-                        @printf(io," %10.6f,  n : %10.6f\n", diag(real(Occup[orb_ind,orb_ind,1]))[or] *2.0, sum( diag(real(Occup[orb_ind,orb_ind,1])))*2.0  )
+                        Printf.@printf(io," %10.6f,  n : %10.6f\n", diag(real(Occup[orb_ind,orb_ind,1]))[or] *2.0, sum( diag(real(Occup[orb_ind,orb_ind,1])))*2.0  )
                     end
                 elseif DMFT_spin_type == 2
                     if or != size(orb_ind)[1]
-                        @printf(io," %10.6f,", diag(real(Occup[orb_ind,orb_ind,1]))[or]+ diag(real(Occup[orb_ind,orb_ind,2]))[or])
+                        Printf.@printf(io," %10.6f,", diag(real(Occup[orb_ind,orb_ind,1]))[or]+ diag(real(Occup[orb_ind,orb_ind,2]))[or])
                     else
-                        @printf(io," %10.6f,  [↑ : %5.3f, ↓ : %5.3f, m : %5.3f, n : %10.6f]\n", diag(real(Occup[orb_ind,orb_ind,1]))[or]+ diag(real(Occup[orb_ind,orb_ind,2]))[or],  sum( diag(real(Occup[orb_ind,orb_ind,1]))),  sum( diag(real(Occup[orb_ind,orb_ind,2]))),sum( diag(real(Occup[orb_ind,orb_ind,1])))- sum( diag(real(Occup[orb_ind,orb_ind,2]))) , sum( diag(real(Occup[orb_ind,orb_ind,1])))+ sum( diag(real(Occup[orb_ind,orb_ind,2])))  )   
+                        Printf.@printf(io," %10.6f,  [↑ : %5.3f, ↓ : %5.3f, m : %5.3f, n : %10.6f]\n", diag(real(Occup[orb_ind,orb_ind,1]))[or]+ diag(real(Occup[orb_ind,orb_ind,2]))[or],  sum( diag(real(Occup[orb_ind,orb_ind,1]))),  sum( diag(real(Occup[orb_ind,orb_ind,2]))),sum( diag(real(Occup[orb_ind,orb_ind,1])))- sum( diag(real(Occup[orb_ind,orb_ind,2]))) , sum( diag(real(Occup[orb_ind,orb_ind,1])))+ sum( diag(real(Occup[orb_ind,orb_ind,2])))  )   
                     end  
             
                 end
             end
 
         end
-        @printf(io, "-------------------------------------------------------------------------------------------\n",  )
+        Printf.@printf(io, "-------------------------------------------------------------------------------------------\n",  )
     end
     
 end
@@ -1027,74 +1030,74 @@ end
 function write_scflog_latt(DMFT_loop, Ineq_atom_Ind, Corr_orbital_Ind, Corr_atom_equiv, imp_dc, mu, Occup, DMFT_spin_type,cal_susc,DMFT_solver)
     open("scf.log", "a") do io
         if DMFT_loop == 0
-            @printf(io,"\n =======================")
+            Printf.@printf(io,"\n =======================")
             for i =1:maximum(Ineq_atom_Ind)*5
                 if i!=maximum(Ineq_atom_Ind)*5
-                    @printf(io, "============")
+                    Printf.@printf(io, "============")
                 else
-                    @printf(io, "============\n")
+                    Printf.@printf(io, "============\n")
                 end
             end  
         
-            @printf(io, "|Iter. [ n ]|    latt_mu|")
+            Printf.@printf(io, "|Iter. [ n ]|    latt_mu|")
             
             
             for i in Ineq_atom_Ind
-                @printf(io, "  latt%1i_occ|", i)
+                Printf.@printf(io, "  latt%1i_occ|", i)
             end
             
             
             for i in Ineq_atom_Ind
-                @printf(io, "    imp%1i_mu|", i)
+                Printf.@printf(io, "    imp%1i_mu|", i)
             end
             
             for i in Ineq_atom_Ind
-                @printf(io, "   imp%1i_occ|", i)
+                Printf.@printf(io, "   imp%1i_occ|", i)
             end
         
             if ((cal_susc) || (DMFT_solver == "EDMFTF_ctqmc"))
                 for i in Ineq_atom_Ind
-                    @printf(io, "     imp%1i_N|", i)
+                    Printf.@printf(io, "     imp%1i_N|", i)
                 end
         
                 for i in Ineq_atom_Ind
                     if i!=maximum(Ineq_atom_Ind)
-                        @printf(io, "     imp%1i_S|", i)
+                        Printf.@printf(io, "     imp%1i_S|", i)
                     else
-                        @printf(io, "     imp%1i_S|\n", i)
+                        Printf.@printf(io, "     imp%1i_S|\n", i)
                     end
                 end
             else
-                @printf(io, "\n")
+                Printf.@printf(io, "\n")
             end
       
-            @printf(io," =======================")
+            Printf.@printf(io," =======================")
             for i =1:maximum(Ineq_atom_Ind)*5
                 if i!=maximum(Ineq_atom_Ind)*5
-                    @printf(io, "============")
+                    Printf.@printf(io, "============")
                 else
-                    @printf(io, "============\n")
+                    Printf.@printf(io, "============\n")
                 end
             end        
         
         
    
         end
-        @printf(io,"|Iter. [%3i]|%10.5f |",DMFT_loop, mu)
+        Printf.@printf(io,"|Iter. [%3i]|%10.5f |",DMFT_loop, mu)
         
         for it in Ineq_atom_Ind
             orb_ind = Corr_orbital_Ind[findall(x->x==it, Corr_atom_equiv)][1]
             if DMFT_spin_type == 1
-                @printf(io,"%10.5f |",  sum( diag(real(Occup[orb_ind,orb_ind,1])))*2.0  )
+                Printf.@printf(io,"%10.5f |",  sum( diag(real(Occup[orb_ind,orb_ind,1])))*2.0  )
             elseif DMFT_spin_type == 2
-                @printf(io,"%10.5f |", sum( diag(real(Occup[orb_ind,orb_ind,1])))+ sum( diag(real(Occup[orb_ind,orb_ind,2])))  )   
+                Printf.@printf(io,"%10.5f |", sum( diag(real(Occup[orb_ind,orb_ind,1])))+ sum( diag(real(Occup[orb_ind,orb_ind,2])))  )   
             end
         end
         
         
         
         for i in Ineq_atom_Ind
-            @printf(io, "%10.5f |", mu ) # imp_dc[i]+mu)
+            Printf.@printf(io, "%10.5f |", mu ) # imp_dc[i]+mu)
         end
         
     
@@ -1134,30 +1137,30 @@ function write_scflog_imp(Ineq_atom_Ind, imp_ind, DMFT_spin_type, Corr_ineq_orbi
             
             if DMFT_spin_type == 1
                 if DMFT_solver == "ComCTQMC"
-                    @printf(io,"%10.5f |", sum( diag(occup_mat[:,:,1]) )*2.0  )
+                    Printf.@printf(io,"%10.5f |", sum( diag(occup_mat[:,:,1]) )*2.0  )
                 elseif DMFT_solver == "EDMFTF_ctqmc"
-                    @printf(io,"%10.5f |", sum( diag(occup_mat[:,:,1]) )  )
+                    Printf.@printf(io,"%10.5f |", sum( diag(occup_mat[:,:,1]) )  )
                 end
             elseif DMFT_spin_type ==2
-                @printf(io,"%10.5f |",sum( diag(occup_mat[:,:,1]) )+sum( diag(occup_mat[:,:,2]) )     )   
+                Printf.@printf(io,"%10.5f |",sum( diag(occup_mat[:,:,1]) )+sum( diag(occup_mat[:,:,2]) )     )   
             end
         end
     
     
         if ( (cal_susc) || (DMFT_solver == "EDMFTF_ctqmc") )
             for i in Ineq_atom_Ind
-                @printf(io, "%10.5f |", susc_N0[i])
+                Printf.@printf(io, "%10.5f |", susc_N0[i])
             end
     
             for i in Ineq_atom_Ind
                 if i!=Ineq_atom_Ind[end]
-                    @printf(io, "%10.5f |", susc_S0[i])
+                    Printf.@printf(io, "%10.5f |", susc_S0[i])
                 else
-                    @printf(io, "%10.5f |\n", susc_S0[i])
+                    Printf.@printf(io, "%10.5f |\n", susc_S0[i])
                 end
             end
         else
-            @printf(io, "\n")
+            Printf.@printf(io, "\n")
         end
 
     end
@@ -1264,14 +1267,14 @@ function write_dc(Ineq_atom_Ind, imp_dc, imp_dc_type, imp_dc_n, imp_totN, dft_co
         
         open(string(folder,filename), "w") do io
             if (imp_dc_type == "nominal" || imp_dc_type == "Norminal" || imp_dc_type == "NORMINAL")
-                @printf(io,"occ : %10.5f\n", imp_dc_n[i]  )
-                @printf(io,"dc (eV) : %10.5f", imp_dc[i]  )
+                Printf.@printf(io,"occ : %10.5f\n", imp_dc_n[i]  )
+                Printf.@printf(io,"dc (eV) : %10.5f", imp_dc[i]  )
             elseif (imp_dc_type == "fll" || imp_dc_type == "Fll" || imp_dc_type == "FLL")
-                @printf(io,"occ : %10.5f\n", imp_totN[i]  )
-                @printf(io,"dc (eV) : %10.5f", imp_dc[i]  )
+                Printf.@printf(io,"occ : %10.5f\n", imp_totN[i]  )
+                Printf.@printf(io,"dc (eV) : %10.5f", imp_dc[i]  )
             elseif (imp_dc_type == "FLL-DFT" || imp_dc_type == "fll-dft" || imp_dc_type == "Fll-dft")
-                @printf(io,"occ : %10.5f\n", dft_corrN[i]  )
-                @printf(io,"dc (eV) : %10.5f", imp_dc[i]  )
+                Printf.@printf(io,"occ : %10.5f\n", dft_corrN[i]  )
+                Printf.@printf(io,"dc (eV) : %10.5f", imp_dc[i]  )
             end
         end
         
@@ -1633,8 +1636,8 @@ function remove_spikes(Corr_atom_equiv,Tem,iWnlist,SelfE_w;spike_ratio_cut=0.03)
                 
                 
                 
-                sig_real_fit = Spline1D(imag(iWnlist[keep_mask]), real(SelfE_w[i][keep_mask,l,s]); k=2,s=0.01)
-                sig_imag_fit = Spline1D(imag(iWnlist[keep_mask]), imag(SelfE_w[i][keep_mask,l,s]); k=2,s=0.01)
+                sig_real_fit = Dierckx.Spline1D(imag(iWnlist[keep_mask]), real(SelfE_w[i][keep_mask,l,s]); k=2,s=0.01)
+                sig_imag_fit = Dierckx.Spline1D(imag(iWnlist[keep_mask]), imag(SelfE_w[i][keep_mask,l,s]); k=2,s=0.01)
 
                 SelfE_w_smooth_block[:,l,s] = sig_real_fit(imag(iWnlist[:])) .+ sig_imag_fit(imag(iWnlist[:])).*im
                 
@@ -1642,8 +1645,8 @@ function remove_spikes(Corr_atom_equiv,Tem,iWnlist,SelfE_w;spike_ratio_cut=0.03)
                 SelfE_w_smooth_block[wsec1,l,s] = SelfE_w[i][wsec1,l,s]                 
                 
                 dupoint = [wsec2[1]-3,wsec2[1]-2,wsec2[1]-1,wsec2[1]+1,wsec2[1]+2,wsec2[1]+3,wsec2[1]+4,wsec2[1]+5,wsec2[1]+6]
-                sig_real_fit_2 = Spline1D(imag(iWnlist[dupoint]), real(SelfE_w_smooth_block[dupoint,l,s]); k=2, s=0.0)
-                sig_imag_fit_2 = Spline1D(imag(iWnlist[dupoint]), imag(SelfE_w_smooth_block[dupoint,l,s]); k=2, s=0.0)
+                sig_real_fit_2 = Dierckx.Spline1D(imag(iWnlist[dupoint]), real(SelfE_w_smooth_block[dupoint,l,s]); k=2, s=0.0)
+                sig_imag_fit_2 = Dierckx.Spline1D(imag(iWnlist[dupoint]), imag(SelfE_w_smooth_block[dupoint,l,s]); k=2, s=0.0)
                 
                 SelfE_w_smooth_block[dupoint,l,s] = sig_real_fit_2(imag(iWnlist[dupoint])).+sig_imag_fit_2(imag(iWnlist[dupoint])).*im
                 SelfE_w_smooth_block[wsec2[1],l,s] = sig_real_fit_2(imag(iWnlist[wsec2[1]]))+sig_imag_fit_2(imag(iWnlist[wsec2[1]]))*im
@@ -1876,8 +1879,8 @@ function Aw_orb(Corr_orbital_Ind,Corr_atom_equiv,wlist, G_loc_w)
             println("latt-",i,", occup(up+dn) : ", wan_corr_occ )
             println("======================================")
             
-            @printf(io, "latt. %2i :", i )
-            @printf(io," %10.6f\n", wan_corr_occ)
+            Printf.@printf(io, "latt. %2i :", i )
+            Printf.@printf(io," %10.6f\n", wan_corr_occ)
             push!(dft_corrN, wan_corr_occ)
             
         end
@@ -2558,7 +2561,7 @@ function Find_mu(iWnlist,H_k,SelfE_w,targetN,beta,delta,Corr_atom_Ind,Corr_orbit
     end    
     push!(y,  Tot_Occup )
     i = 1
-    @printf " [%3.0f ] Test mu : %11.7f  ==>  Occup : %10.6f  |  target N : %4.1f \n" i testmu  Tot_Occup  targetN
+    Printf.@printf " [%3.0f ] Test mu : %11.7f  ==>  Occup : %10.6f  |  target N : %4.1f \n" i testmu  Tot_Occup  targetN
     
     if ( abs.(targetN - Tot_Occup) <  criterian )
          print("-----------------------------------------------------------------------\n")
@@ -2583,7 +2586,7 @@ function Find_mu(iWnlist,H_k,SelfE_w,targetN,beta,delta,Corr_atom_Ind,Corr_orbit
     end    
     push!(y,  Tot_Occup )
     i = 2
-    @printf " [%3.0f ] Test mu : %11.7f  ==>  Occup : %10.6f  |  target N : %4.1f \n" i testmu  Tot_Occup  targetN
+    Printf.@printf " [%3.0f ] Test mu : %11.7f  ==>  Occup : %10.6f  |  target N : %4.1f \n" i testmu  Tot_Occup  targetN
     
     
     if ( abs.(targetN - Tot_Occup) <  criterian )
@@ -2596,7 +2599,7 @@ function Find_mu(iWnlist,H_k,SelfE_w,targetN,beta,delta,Corr_atom_Ind,Corr_orbit
 
     
 
-    spl = Spline1D(x, y;  k=1)
+    spl = Dierckx.Spline1D(x, y;  k=1)
 
 
 
@@ -2617,7 +2620,7 @@ function Find_mu(iWnlist,H_k,SelfE_w,targetN,beta,delta,Corr_atom_Ind,Corr_orbit
             Tot_Occup =  sum(real(diag(Occup[:,:,1]+Occup[:,:,2])))
         end    
         push!(y,  Tot_Occup )
-        @printf " [%3.0f ] Test mu : %11.7f  ==>  Occup : %10.6f  |  target N : %4.1f \n" i testmu  Tot_Occup  targetN
+        Printf.@printf " [%3.0f ] Test mu : %11.7f  ==>  Occup : %10.6f  |  target N : %4.1f \n" i testmu  Tot_Occup  targetN
     
         
         
@@ -2637,11 +2640,11 @@ function Find_mu(iWnlist,H_k,SelfE_w,targetN,beta,delta,Corr_atom_Ind,Corr_orbit
         end
 
         if i > 5
-            spl = Spline1D(xd, yd;  k=3)
+            spl = Dierckx.Spline1D(xd, yd;  k=3)
         elseif i > 4
-            spl = Spline1D(xd, yd;  k=2)
+            spl = Dierckx.Spline1D(xd, yd;  k=2)
         else
-            spl = Spline1D(xd, yd;  k=1)
+            spl = Dierckx.Dierckx.Spline1D(xd, yd;  k=1)
         end
 
     end

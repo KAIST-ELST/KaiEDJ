@@ -36,7 +36,7 @@ using Pkg
 #     Pkg.add(modname)
 # end
 
-
+Pkg.add("DFTforge")
 Pkg.add(url="https://github.com/KAIST-ELST/ThreadedSparseCSR.jl")
 Pkg.add(path=".")
 include("scripts/patch_hotfix.jl")

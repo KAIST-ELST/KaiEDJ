@@ -1,4 +1,4 @@
-using Plots
+using KaiEDJ: Plots
 using DelimitedFiles
 
 Jdat_1_1 = readdlm("Jx_1_1.dat")
@@ -16,8 +16,8 @@ x2 = convert( Vector{Float64}, x2 )
 J11= convert( Vector{Float64}, J11 )
 J12= convert( Vector{Float64}, J12 )
 
-plot(  x1, J11, lc=:red,  mc=:red,  markershape = :circle, label="atom1-atom1", xlabel="Distance [Angst]", ylabel="J [meV]")
-plot!( x2, J12, lc=:blue, mc=:blue, markershape = :square, label="atom1-atom2")
+Plots.plot(  x1, J11, lc=:red,  mc=:red,  markershape = :circle, label="atom1-atom1", xlabel="Distance [Angst]", ylabel="J [meV]")
+Plots.plot!( x2, J12, lc=:blue, mc=:blue, markershape = :square, label="atom1-atom2")
 
-savefig( "output_dmftmft_lco.png" )
-savefig( "output_dmftmft_lco.pdf" )
+Plots.savefig( "output_dmftmft_lco.png" )
+Plots.savefig( "output_dmftmft_lco.pdf" )

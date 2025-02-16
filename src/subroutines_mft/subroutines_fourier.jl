@@ -1,4 +1,5 @@
 ################## Fourier transformation of block G or V by FFTW subroutine
+using KaiEDJ: FFTW
 
 function FFTW_k2r_block(Klist,Rlist,atom12_list,F_k_iWn_block)
     F_R_iWn_block=[];

@@ -1,3 +1,5 @@
+using KaiEDJ: Printf
+
 #### J cal section ####
 
 function iWnlist_div(iWnlist,div)
@@ -49,11 +51,11 @@ function J_print(atom12_list,sorted_cell_ind, sorted_R_grid_ind,sorted_dist, sor
     for i = 1:size(atom12_list)[1]
         file_n = string("Jx_raw_",atom12_list[i][1],"_",atom12_list[i][2],".dat")
         open(file_n, "w") do io
-            @printf(io,"  R1   R2   R3      I1   I2   I3      A1   A2           dist.               Jij\n")
+            Printf.@printf(io,"  R1   R2   R3      I1   I2   I3      A1   A2           dist.               Jij\n")
             for j = 1:size(sorted_J[i])[1]
                 #if sorted_dist[i][j] != 0.0
                     #@printf(io,"\n\n\n\n\nDistance: %10.6f,    Cell Ind. [%2i,%2i,%2i],    Atom Ind (%2i,%2i)\n\n",sorted_dist[i][j],sorted_cell_ind[i][j][1],sorted_cell_ind[i][j][2],sorted_cell_ind[i][j][3],atom12_list[i][1],atom12_list[i][2] )
-                    @printf(io,"%4i %4i %4i    %4i %4i %4i    %4i %4i    %18.14f %18.14f\n",sorted_cell_ind[i][j][1],sorted_cell_ind[i][j][2],sorted_cell_ind[i][j][3],sorted_R_grid_ind[i][j][1],sorted_R_grid_ind[i][j][2],sorted_R_grid_ind[i][j][3],atom12_list[i][1],atom12_list[i][2], sorted_dist[i][j], real(sorted_J[i][j])  )
+                    Printf.@printf(io,"%4i %4i %4i    %4i %4i %4i    %4i %4i    %18.14f %18.14f\n",sorted_cell_ind[i][j][1],sorted_cell_ind[i][j][2],sorted_cell_ind[i][j][3],sorted_R_grid_ind[i][j][1],sorted_R_grid_ind[i][j][2],sorted_R_grid_ind[i][j][3],atom12_list[i][1],atom12_list[i][2], sorted_dist[i][j], real(sorted_J[i][j])  )
                 #end
             end    
         end
@@ -65,30 +67,30 @@ function J_print(atom12_list,sorted_cell_ind, sorted_R_grid_ind,sorted_dist, sor
         open(file_n, "w") do io
             for j = 1:size(sorted_J[i])[1]
                 if sorted_dist[i][j] != 0.0
-                    @printf(io,"%10.6f %10.6f\n", sorted_dist[i][j], real(sorted_J[i][j])  )
+                    Printf.@printf(io,"%10.6f %10.6f\n", sorted_dist[i][j], real(sorted_J[i][j])  )
                 end
             end    
         end
     end
     
     open("zeroline.dat", "w") do io
-        @printf(io,"%10.6f %10.6f\n", 0.0, 0.0)
-        @printf(io,"%10.6f %10.6f\n", 1000.0, 0.0)
+        Printf.@printf(io,"%10.6f %10.6f\n", 0.0, 0.0)
+        Printf.@printf(io,"%10.6f %10.6f\n", 1000.0, 0.0)
     end
 
 
     open("Jx.gnu", "w") do io
-        @printf(io,"set xra [0:20]\n")
-        @printf(io,"plot \"zeroline.dat\" u 1:2 w l lw 2 lt 0,")
+        Printf.@printf(io,"set xra [0:20]\n")
+        Printf.@printf(io,"plot \"zeroline.dat\" u 1:2 w l lw 2 lt 0,")
         for i = 1:size(atom12_list)[1]
             file_n = string("Jx_",atom12_list[i][1],"_",atom12_list[i][2],".dat")
             if i !=size(atom12_list)[1]
-                @printf(io,"\"%s\" u 1:2 w linespoints pt 7 ps 1.7 lw 1.3, ", file_n)
+                Printf.@printf(io,"\"%s\" u 1:2 w linespoints pt 7 ps 1.7 lw 1.3, ", file_n)
             else
-                @printf(io,"\"%s\" u 1:2 w linespoints pt 7 ps 1.7 lw 1.3\n ", file_n)
+                Printf.@printf(io,"\"%s\" u 1:2 w linespoints pt 7 ps 1.7 lw 1.3\n ", file_n)
             end
         end
-        @printf(io,"pause -1")
+        Printf.@printf(io,"pause -1")
     end
     
 
@@ -97,24 +99,24 @@ function J_print(atom12_list,sorted_cell_ind, sorted_R_grid_ind,sorted_dist, sor
         open(file_n, "w") do io
             for j = 1:20
                 if sorted_dist[i][j] != 0.0
-                    @printf(io,"\n\n\n\n\nDistance: %10.6f,    Cell Ind. [%2i,%2i,%2i],    Atom Ind (%2i,%2i)\n\n",sorted_dist[i][j],sorted_cell_ind[i][j][1],sorted_cell_ind[i][j][2],sorted_cell_ind[i][j][3],atom12_list[i][1],atom12_list[i][2] )
-                    @printf(io,"   J =          ")
+                    Printf.@printf(io,"\n\n\n\n\nDistance: %10.6f,    Cell Ind. [%2i,%2i,%2i],    Atom Ind (%2i,%2i)\n\n",sorted_dist[i][j],sorted_cell_ind[i][j][1],sorted_cell_ind[i][j][2],sorted_cell_ind[i][j][3],atom12_list[i][1],atom12_list[i][2] )
+                    Printf.@printf(io,"   J =          ")
                     for orb2 = 1:size(sorted_J_orb[1][1])[2]
-                        @printf(io,"orb%1i    ",orb2)
+                        Printf.@printf(io,"orb%1i    ",orb2)
                     end
-                    @printf(io,"\n")
-                    @printf(io,"        ")
+                    Printf.@printf(io,"\n")
+                    Printf.@printf(io,"        ")
                     for orb1 =1:size(sorted_J_orb[1][1])[1]
-                        @printf(io,"orb%1i ",orb1)
+                        Printf.@printf(io,"orb%1i ",orb1)
                         for orb2 = 1:size(sorted_J_orb[1][1])[2]
-                            @printf(io,"%8.4f",real(sorted_J_orb[i][j][orb1,orb2]))
+                            Printf.@printf(io,"%8.4f",real(sorted_J_orb[i][j][orb1,orb2]))
                         end
-                        @printf(io,"\n")
-                        @printf(io,"        ")
+                        Printf.@printf(io,"\n")
+                        Printf.@printf(io,"        ")
                         
                         if orb1 == size(sorted_J_orb[1][1])[1]
-                            @printf(io,"\n")
-                            @printf(io,"          J_tot : %8.4f,    J_sum : %8.4f\n", real(sorted_J[i][j]), sum(real(sorted_J_orb[i][j][:,:])) ) 
+                            Printf.@printf(io,"\n")
+                            Printf.@printf(io,"          J_tot : %8.4f,    J_sum : %8.4f\n", real(sorted_J[i][j]), sum(real(sorted_J_orb[i][j][:,:])) ) 
                             
                         end
                         

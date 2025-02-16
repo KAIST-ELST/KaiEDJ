@@ -1,3 +1,6 @@
+using KaiEDJ: Printf
+
+
 function input_handler(DMFT_Jx_option)
 
    if (DMFT_Jx_option.Calculation_mode == "DMFT")
@@ -398,7 +401,7 @@ function write_outfile(str,iWnlist,funct,Corr_atom_equiv,DMFT_spin_type,imp_ind)
         strRe=""
         strIm=""
         iwn_str="Im{iWn}"
-        @printf(io," %20s",iwn_str)
+        Printf.@printf(io," %20s",iwn_str)
         if DMFT_spin_type>0
             for i in unique(abs.(Corr_atom_equiv))
                 for s =1:DMFT_spin_type
@@ -406,29 +409,29 @@ function write_outfile(str,iWnlist,funct,Corr_atom_equiv,DMFT_spin_type,imp_ind)
                         if l>0
                             strRe = string("Re{",str,"_",i,"}[",l,",",s,"]")
                             strIm = string("Im{",str,"_",i,"}[",l,",",s,"]")   
-                            @printf(io, " %20s %20s", strRe, strIm)
+                            Printf.@printf(io, " %20s %20s", strRe, strIm)
                         end
                     end
                 end
             end
         end
         
-        @printf(io,"\n")
+        Printf.@printf(io,"\n")
 
         for w = 1:size(iWnlist)[1]
-            @printf(io, " %20.14f", imag(iWnlist[w]))
+            Printf.@printf(io, " %20.14f", imag(iWnlist[w]))
             if DMFT_spin_type>0
                 for i in unique(abs.(Corr_atom_equiv))
                     for s =1:DMFT_spin_type
                         for l in unique(imp_ind[i])
                             if l>0
-                                @printf(io, " %20.14f %20.14f", real(funct[i][w,l,s]), imag(funct[i][w,l,s]))
+                                Printf.@printf(io, " %20.14f %20.14f", real(funct[i][w,l,s]), imag(funct[i][w,l,s]))
                             end
                         end
                     end
                 end
             end
-            @printf(io,"\n")
+            Printf.@printf(io,"\n")
         
         end
     
@@ -468,32 +471,32 @@ function write_outfile_mat(str,iWnlist,funct)
             strRe=""
             strIm=""
             iwn_str="Im{iWn}"
-            @printf(io," %20s",iwn_str)
+            Printf.@printf(io," %20s",iwn_str)
             if DMFT_spin_type>0              
                 for s =1:DMFT_spin_type
                     for l1 = 1:size(funct[i])[2]
                         for l2 = 1:size(funct[i])[3]
                             strRe = string("Re{",str,"_",l1,"_",l2,"}[",s,"]")
                             strIm = string("Im{",str,"_",l1,"_",l2,"}[",s,"]")
-                            @printf(io, " %20s %20s", strRe, strIm)
+                            Printf.@printf(io, " %20s %20s", strRe, strIm)
                         end
                     end
                 end
             end
-            @printf(io,"\n")
+            Printf.@printf(io,"\n")
             for w = 1:size(iWnlist)[1]
-                @printf(io, " %20.14f", imag(iWnlist[w]))
+                Printf.@printf(io, " %20.14f", imag(iWnlist[w]))
                 if DMFT_spin_type>0
                     for s =1:DMFT_spin_type
                         for l1 = 1:size(funct[i])[2]
                             for l2 = 1:size(funct[i])[3]
-                                @printf(io, " %20.14f %20.14f", real(funct[i][w,l1,l2,s]), imag(funct[i][w,l1,l2,s]))
+                                Printf.@printf(io, " %20.14f %20.14f", real(funct[i][w,l1,l2,s]), imag(funct[i][w,l1,l2,s]))
 
                             end
                         end
                     end
                 end
-                @printf(io,"\n")
+                Printf.@printf(io,"\n")
             end
         end
     end
