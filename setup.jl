@@ -28,8 +28,8 @@ ModuleNames = [
                 "ImageFiltering",
                 "HDF5",
                 "DFTforge"
+                "JLD2"
                 ]
-ModuleNames = [ ]
 nmod = length(ModuleNames)
 for (imod, modname) in Iterators.enumerate(ModuleNames )
     println( "[$(imod)/$(nmod)] $(modname) ..." )

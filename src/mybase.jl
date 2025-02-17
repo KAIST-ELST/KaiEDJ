@@ -1,8 +1,8 @@
 using Distributed
 
 @everywhere using Pkg
-@everywhere project_path_ed = ENV["PROJECT_PATH_ED"]
-@everywhere Pkg.activate(project_path_ed)
+# @everywhere project_path_ed = ENV["PROJECT_PATH_ED"]
+# @everywhere Pkg.activate(project_path_ed)
 
 @everywhere using Formatting
 @everywhere using LinearAlgebra
