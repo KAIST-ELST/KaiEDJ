@@ -36,4 +36,4 @@ for (imod, modname) in Iterators.enumerate(ModuleNames )
     Pkg.add(modname)
 end
 
-include("scripts/patch_hotfix.jl")
+#include("scripts/patch_hotfix.jl") # Not required for DFTforge 1.4.2 and higher

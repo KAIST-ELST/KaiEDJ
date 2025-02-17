@@ -68,7 +68,8 @@ dump( hamiltonian_info )
 
 
 # ENV["PROJECT_PATH_ED"]="/Users/jun/dmft/ed/github/KaiED/envs/KED"
-include("/Users/jun/github/KaiEDJ/src/mybase.jl")
+#include("/Users/jun/github/KaiEDJ/src/mybase.jl")
+include("../src/mybase.jl")
 @show tick()
 
 toml_filename   = arg_input.TOMLinput
