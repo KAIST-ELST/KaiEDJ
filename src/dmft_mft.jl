@@ -1,12 +1,14 @@
 using KaiEDJ
-using KaiEDJ: Printf, TOML, KaiEDJ_MFT
-using KaiEDJ.KaiEDJ_MFT : input_handler, show_input, write_outfile, write_outfile_mat
+using KaiEDJ: Printf, TOML #, KaiEDJ_MFT
+#using KaiEDJ.KaiEDJ_MFT : input_handler, show_input, write_outfile, write_outfile_mat
+using KaiEDJ: input_handler, show_input, write_outfile, write_outfile_mat
 using DFTforge
 using Distributed
 
 @everywhere using KaiEDJ
 @everywhere using KaiEDJ: Printf, TOML, KaiEDJ_MFT
-@everywhere using KaiEDJ.KaiEDJ_MFT: input_handler, show_input, write_outfile, write_outfile_mat
+#@everywhere using KaiEDJ.KaiEDJ_MFT: input_handler, show_input, write_outfile, write_outfile_mat
+@everywhere using KaiEDJ: input_handler, show_input, write_outfile, write_outfile_mat
 
 
 ## import DFTforge
