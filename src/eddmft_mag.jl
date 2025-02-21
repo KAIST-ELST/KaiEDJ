@@ -74,6 +74,7 @@ using KaiEDJ: TOML, TickTock, I
 using LinearAlgebra
 
 @show KaiEDJ.TickTock.tick()
+# include("../src/mybase.jl")
 
 toml_filename   = arg_input.TOMLinput
 TOML_param      = TOML.parsefile(toml_filename)["KaiEDJ"]
