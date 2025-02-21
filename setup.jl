@@ -17,7 +17,7 @@ ModuleNames = [
                 "OptimizationOptimJL",
                 "Optim",
                 "Arpack",
-                "ThreadedSparseCSR",
+                #"ThreadedSparseCSR",
                 "SparseMatricesCSR",
                 "Plots",
                 "TickTock",
@@ -37,3 +37,5 @@ for (imod, modname) in Iterators.enumerate(ModuleNames )
 end
 
 #include("scripts/patch_hotfix.jl") # Not required for DFTforge 1.4.2 and higher
+Pkg.add(url="https://github.com/KAIST-ELST/ThreadedSparseCSR.jl")
+
