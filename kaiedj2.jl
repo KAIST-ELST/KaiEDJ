@@ -1,7 +1,7 @@
 import KaiEDJ
-using KaiEDJ.KaiEDJ_MFT
+#using KaiEDJ.KaiEDJ_MFT
 
-KaiEDJ_MFT.check_print_version()
+#KaiEDJ_MFT.check_print_version()
 
 using Statistics
 

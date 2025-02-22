@@ -53,7 +53,6 @@ include("subroutines_eddmft/observables.jl")
 
 
 include("KaiEDJ_MFT.jl")
-using .KaiEDJ_MFT
 
 println("[info] Loading KaiEDJ finished")
 
