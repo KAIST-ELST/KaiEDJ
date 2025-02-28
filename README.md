@@ -5,6 +5,7 @@
 
 * Hyeong Jun Lee   --  hjuntaf (at) gmail.com
 * Taekjung Kim     --  tj.kim (at) kaist.ac.kr
+* Hongkee yoon     --  hongkeeyoon (at) kangwon.ac.kr
 
 The KaiEDJ is maintained by KAIST-ELST Group (https://github.com/KAIST-ELST).
 
@@ -18,7 +19,7 @@ The KaiEDJ is maintained by KAIST-ELST Group (https://github.com/KAIST-ELST).
 
 **[Citation]**
 
-(In preparation.) 
+(Submitted) 
 *KaiEDJ: A program conducting dynamical mean-field theory and magnetic force theory calculation for correlated magnetic materials*,
 Hyeong Jun Lee, Taek Jung Kim, Hongkee Yoon, Myung Joon Han
 
@@ -36,7 +37,7 @@ Hyeong Jun Lee, Taek Jung Kim, Hongkee Yoon, Myung Joon Han
   export PATH=<your-julia-full-path>/bin/:$PATH      # a shell-script example such as in .bashrc or .bash_profile
   ```
   >  Version-test successfully done for
-  > * julia >= 1.8.5,  <= 1.10.4
+  > * julia >= 1.8.5,  <= 1.11.3
 
 
 - Install a set of required packages supported by Julia by running `setup.jl` provided in our package.

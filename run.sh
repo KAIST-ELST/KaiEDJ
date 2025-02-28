@@ -1,11 +1,11 @@
 # Running KaiEDJ 
 
 # 0. Installation
-export JULIA="julia +1.10"
+export JULIA="julia"
 $JULIA setup.jl
     
 WORKDIR=$PWD
-JULIA_PROJECT_PATH="./envs/KEDJ"
+JULIA_PROJECT_PATH="$WORKDIR/envs/KEDJ"
 # JULIA_PROJECT_PATH="~/envs_julia/dmftjx_julia-1.10.3"
 
 

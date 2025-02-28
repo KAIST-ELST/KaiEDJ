@@ -27,8 +27,8 @@ ModuleNames = [
                 "Dierckx",
                 "ImageFiltering",
                 "HDF5",
+                "JLD2",
                 "DFTforge"
-                "JLD2"
                 ]
 nmod = length(ModuleNames)
 for (imod, modname) in Iterators.enumerate(ModuleNames )
